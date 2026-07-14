@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://y8bf6a7baks4"
-path="res://.godot/imported/Stickbug-Walk.png-a5986532f3f5d09fbb2ded6d30cf1670.ctex"
+uid="uid://bvlo2y1mssebb"
+path="res://.godot/imported/Stickbug-Spritesheet.png-f3481664a20114b1787b4b7877c9a6bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Stickbug-Walk.png"
-dest_files=["res://.godot/imported/Stickbug-Walk.png-a5986532f3f5d09fbb2ded6d30cf1670.ctex"]
+source_file="res://Art/Stickbug-Spritesheet.png"
+dest_files=["res://.godot/imported/Stickbug-Spritesheet.png-f3481664a20114b1787b4b7877c9a6bf.ctex"]
 
 [params]
 
