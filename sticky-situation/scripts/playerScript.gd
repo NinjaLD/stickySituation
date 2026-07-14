@@ -12,10 +12,7 @@ extends CharacterBody2D
 
 var potentialVelocity : float
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
+# Automatic
 func _physics_process(delta: float) -> void:
 	gravity()
 	if is_on_floor():
@@ -26,6 +23,9 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide()
 
+
+
+# Custom
 func gravity() -> void:
 	if not is_on_floor():
 		velocity.y += gravityAccel
@@ -52,8 +52,6 @@ func Walk() -> void:
 	else:
 		velocity.x = clampf(velocity.x + GetInputDir() * walkAccel, -walkSpeed, walkSpeed)
 
-#Changed the jump value to be lower so the charge has a bigger effect
-#Wanting to add velocityDir to be part of the function so we can check for direction for horizontal boost
 func Jump() -> void:
 	if Input.is_action_pressed("jump") and is_on_floor():
 		potentialVelocity = minf(potentialVelocity + jumpChargeRate, 1)
