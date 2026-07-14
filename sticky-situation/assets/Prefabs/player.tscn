@@ -82,12 +82,15 @@ radius = 15.333334
 height = 49.333336
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1909432878]
-scale = Vector2(1.5, 1.5)
+scale = Vector2(0.5, 0.5)
 script = ExtResource("1_g2els")
-gravityAccel = 25
+gravityAccel = 15
 walkAccel = 15
-walkSpeed = 600
+walkSpeed = 200
 decceleration = 10
+jumpChargeRate = 0.01
+jumpVelBoostY = Vector2(225, 450)
+jumpVelBoostX = Vector2(100, 400)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2002029042]
 sprite_frames = SubResource("SpriteFrames_4nyrb")
