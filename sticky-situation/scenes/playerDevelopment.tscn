@@ -34,8 +34,8 @@ scale = Vector2(1, 0.99999994)
 texture = ExtResource("1_40edo")
 
 [node name="Platform3" type="StaticBody2D" parent="Level" unique_id=506103300]
-position = Vector2(360, 200)
-scale = Vector2(1.0320015, 1.0910002)
+position = Vector2(807, 184)
+scale = Vector2(6.4720025, 1.0910002)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Platform3" unique_id=1990917274]
 scale = Vector2(6.41, 6.41)
@@ -46,3 +46,7 @@ scale = Vector2(1, 0.99999994)
 texture = ExtResource("1_40edo")
 
 [node name="CharacterBody2D" parent="." unique_id=1909432878 instance=ExtResource("2_40edo")]
+walkAccel = 25
+decceleration = 20
+jumpVelBoostY = Vector2(400, 650)
+jumpVelBoostX = Vector2(250, 500)

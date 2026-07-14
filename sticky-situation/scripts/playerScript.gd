@@ -6,10 +6,11 @@ extends CharacterBody2D
 @export var walkSpeed : int
 @export var decceleration : int
 #@export var jumpVelocity : Vector2
-@export var minVerticalVelocity : int
-@export var maxVerticalVelocity : int
+@export var jumpChargeRate : int
+@export var jumpVelBoostY : Vector2
+@export var jumpVelBoostX : Vector2
 
-var potentialVelocity : int
+var potentialVelocity : float
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -55,14 +56,14 @@ func Walk() -> void:
 #Wanting to add velocityDir to be part of the function so we can check for direction for horizontal boost
 func Jump() -> void:
 	if Input.is_action_pressed("jump") and is_on_floor():
-		#Charges the players' potential velocity every tick by 10
-		potentialVelocity += 10
+		potentialVelocity = minf(potentialVelocity + 0.01, 1)
 	if Input.is_action_just_released("jump") and is_on_floor():
-		#Set a maxVerticalVelocity to stop the player from jumping insanely high (is set as a var)
-		#This is the min vertical velocity + the potentialVelocity (charge) which goes up to at most the max velocity
-		velocity.y = maxf(-(minVerticalVelocity + potentialVelocity), -maxVerticalVelocity)
+		#velocity.y = maxf(-(jumpVelBoostY.x + potentialVelocity), -jumpVelBoostY.y)
+		#velocity.x += minf((jumpVelBoostX.x + potentialVelocity), jumpVelBoostX.y) * GetVelocityDir()
+		velocity.y = -(jumpVelBoostY.x + (jumpVelBoostY.y - jumpVelBoostY.x) * potentialVelocity)
+		velocity.x += (jumpVelBoostX.x + (jumpVelBoostX.y - jumpVelBoostX.x) * potentialVelocity) * GetVelocityDir()
+		
 		potentialVelocity = 0
-		velocity.x += 200 * GetVelocityDir()
 
 #Plays character animations relative to what they are doing
 func Animation() -> void:
