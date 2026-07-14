@@ -23,6 +23,7 @@ func _physics_process(delta: float) -> void:
 	Jump()
 	Animation()
 	AnimationDirection()
+	print(is_on_floor())
 	
 	move_and_slide()
 

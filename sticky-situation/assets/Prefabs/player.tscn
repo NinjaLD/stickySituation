@@ -100,3 +100,4 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_v84v7")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2029314000]
+zoom = Vector2(3, 3)
