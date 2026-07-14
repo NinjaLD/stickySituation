@@ -1,10 +1,15 @@
 [gd_scene format=3 uid="uid://dfrhu1w5058l2"]
 
+[ext_resource type="Script" uid="uid://ytwhrchk8l3r" path="res://scripts/menuHandler.gd" id="1_m0w26"]
+
 [node name="StartMenu" type="Node2D" unique_id=968487194]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2065483029]
 
-[node name="playButton" type="Button" parent="Camera2D" unique_id=62117288]
+[node name="Menu Handler" type="Node" parent="." unique_id=1599065744]
+script = ExtResource("1_m0w26")
+
+[node name="playButton" type="Button" parent="Menu Handler" unique_id=62117288]
 offset_left = -525.0
 offset_top = -261.0
 offset_right = 52.0
@@ -13,10 +18,13 @@ theme_override_font_sizes/font_size = 120
 text = "PLAY
 "
 
-[node name="exitButton" type="Button" parent="Camera2D" unique_id=607396732]
+[node name="exitButton" type="Button" parent="Menu Handler" unique_id=607396732]
 offset_left = -517.0
 offset_top = 60.0
 offset_right = 60.0
 offset_bottom = 241.0
 theme_override_font_sizes/font_size = 120
 text = "EXIT"
+
+[connection signal="pressed" from="Menu Handler/playButton" to="Menu Handler" method="_on_play_button_pressed"]
+[connection signal="pressed" from="Menu Handler/exitButton" to="Menu Handler" method="_on_exit_button_pressed"]
