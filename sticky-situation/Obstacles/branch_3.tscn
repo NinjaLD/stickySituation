@@ -42,7 +42,7 @@ rotation = 1.3104292
 scale = Vector2(0.46327138, 0.2109375)
 texture = ExtResource("2_hwu68")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=657847632]
+[node name="Branch_Collision3" type="CollisionShape2D" parent="." unique_id=657847632]
 position = Vector2(47.036747, 62.46002)
 rotation = -0.25387183
 shape = SubResource("RectangleShape2D_3it7e")
