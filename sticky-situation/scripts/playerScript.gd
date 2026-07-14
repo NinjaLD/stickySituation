@@ -10,10 +10,6 @@ extends CharacterBody2D
 func _ready() -> void:
 	pass # Replace with function body.
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
 func _physics_process(delta: float) -> void:
 	gravity()
 	if is_on_floor():
@@ -47,5 +43,5 @@ func Walk() -> void:
 func Jump() -> void:
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = jumpVelocity
-		velocity.x += 0.5 * velocity.x
+		velocity.x += 0.5 * velocity.x # change to be for hold jump is mor boing boing
 		print(velocity.x)
