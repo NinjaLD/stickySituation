@@ -88,7 +88,8 @@ gravityAccel = 25
 walkAccel = 15
 walkSpeed = 600
 decceleration = 10
-jumpVelocity = Vector2(1100, 400)
+minVerticalVelocity = 500
+maxVerticalVelocity = 1500
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1275531803]
 
