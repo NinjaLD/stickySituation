@@ -47,7 +47,3 @@ texture = ExtResource("1_40edo")
 
 [node name="CharacterBody2D" parent="." unique_id=1909432878 instance=ExtResource("2_40edo")]
 position = Vector2(23, 0)
-walkAccel = 25
-decceleration = 20
-jumpVelBoostY = Vector2(400, 650)
-jumpVelBoostX = Vector2(250, 500)

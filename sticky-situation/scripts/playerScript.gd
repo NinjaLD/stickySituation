@@ -6,7 +6,7 @@ extends CharacterBody2D
 @export var walkSpeed : int
 @export var decceleration : int
 #@export var jumpVelocity : Vector2
-@export var jumpChargeRate : int
+@export var jumpChargeRate : float
 @export var jumpVelBoostY : Vector2
 @export var jumpVelBoostX : Vector2
 
@@ -57,7 +57,7 @@ func Walk() -> void:
 #Wanting to add velocityDir to be part of the function so we can check for direction for horizontal boost
 func Jump() -> void:
 	if Input.is_action_pressed("jump") and is_on_floor():
-		potentialVelocity = minf(potentialVelocity + 0.01, 1)
+		potentialVelocity = minf(potentialVelocity + jumpChargeRate, 1)
 	if Input.is_action_just_released("jump") and is_on_floor():
 		velocity.y = -(jumpVelBoostY.x + (jumpVelBoostY.y - jumpVelBoostY.x) * potentialVelocity)
 		velocity.x += (jumpVelBoostX.x + (jumpVelBoostX.y - jumpVelBoostX.x) * potentialVelocity) * GetVelocityDir()
