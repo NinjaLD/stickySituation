@@ -1,5 +1,36 @@
-[gd_scene format=3 uid="uid://bpm0f8hd0r54o"]
+[gd_scene format=3 uid="uid://dfrhu1w5058l2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_n4orl"]
 
 [node name="StartMenu" type="Node2D" unique_id=968487194]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2065483029]
+
+[node name="playButton" type="Button" parent="Camera2D" unique_id=62117288]
+offset_left = -541.0
+offset_top = 57.0
+offset_right = 36.0
+offset_bottom = 238.0
+
+[node name="Play" type="Label" parent="Camera2D/playButton" unique_id=93164370]
+layout_mode = 0
+offset_right = 575.0
+offset_bottom = 179.0
+theme_override_font_sizes/font_size = 120
+text = "Play"
+
+[node name="exitButton" type="Button" parent="Camera2D" unique_id=793625208]
+offset_left = -536.0
+offset_top = -264.0
+offset_right = 53.0
+offset_bottom = -90.0
+
+[node name="Exit" type="Label" parent="Camera2D/exitButton" unique_id=1296662380]
+layout_mode = 0
+offset_right = 589.0
+offset_bottom = 177.0
+theme_override_font_sizes/font_size = 120
+text = "yay
+
+"
+label_settings = SubResource("LabelSettings_n4orl")
