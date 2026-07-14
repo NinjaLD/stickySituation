@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dfrhu1w5058l2"]
 
 [ext_resource type="Script" uid="uid://ytwhrchk8l3r" path="res://scripts/menuHandler.gd" id="1_m0w26"]
+[ext_resource type="Texture2D" uid="uid://ccseylo8jjmq7" path="res://Art/Play-Button.png" id="2_j40ox"]
 
 [node name="StartMenu" type="Node2D" unique_id=968487194]
 
@@ -10,13 +11,18 @@
 script = ExtResource("1_m0w26")
 
 [node name="playButton" type="Button" parent="Menu Handler" unique_id=62117288]
-offset_left = -525.0
-offset_top = -261.0
-offset_right = 52.0
-offset_bottom = -80.0
+offset_left = -486.0
+offset_top = -247.0
+offset_right = -84.0
+offset_bottom = -74.0
 theme_override_font_sizes/font_size = 120
-text = "PLAY
+text = "
 "
+
+[node name="Sprite2D" type="Sprite2D" parent="Menu Handler/playButton" unique_id=1161668545]
+position = Vector2(200, 65)
+scale = Vector2(8.5, 8.5)
+texture = ExtResource("2_j40ox")
 
 [node name="exitButton" type="Button" parent="Menu Handler" unique_id=607396732]
 offset_left = -517.0
