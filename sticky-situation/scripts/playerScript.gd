@@ -63,5 +63,7 @@ func Animation() -> void:
 		animatedSprite.play("Jump")
 
 func AnimationDirection() -> void:
-	if GetInputDir() > 0:
-		animatedSprite.flip_h
+	if GetInputDir() < 0 and velocity.x < 0:
+		animatedSprite.flip_h = true
+	elif GetInputDir() > 0 and velocity.x > 0:
+		animatedSprite.flip_h = false
