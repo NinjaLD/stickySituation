@@ -32,7 +32,7 @@ func gravity() -> void:
 func GetInputDir() -> float:
 	return Input.get_axis("moveLeft", "moveRight")
 
-func Walk() -> void:
+func GetVelocityDir() -> int:
 	var velocityDir
 	if velocity.x > 0:
 		velocityDir = 1
@@ -41,8 +41,12 @@ func Walk() -> void:
 	else:
 		velocityDir = 0
 	
+	return velocityDir
+
+func Walk() -> void:
+	
 	if GetInputDir() == 0:
-		velocity.x = maxf(abs(velocity.x) - decceleration, 0) * velocityDir
+		velocity.x = maxf(abs(velocity.x) - decceleration, 0) * GetVelocityDir()
 		pass 
 	else:
 		velocity.x = clampf(velocity.x + GetInputDir() * walkAccel, -walkSpeed, walkSpeed)
@@ -57,8 +61,8 @@ func Jump() -> void:
 		#Set a maxVerticalVelocity to stop the player from jumping insanely high (is set as a var)
 		#This is the min vertical velocity + the potentialVelocity (charge) which goes up to at most the max velocity
 		velocity.y = maxf(-(minVerticalVelocity + potentialVelocity), -maxVerticalVelocity)
-		potentialVelocity = 0 #Reset the potentialVelocity so it loses its charge
-		velocity.x += 200 #* velocityDir (don't know how to add yet) #200 is just a base value here, we can make it a variable, this is the horizontal boost you get when you jump
+		potentialVelocity = 0
+		velocity.x += 200 * GetVelocityDir()
 
 #Plays character animations relative to what they are doing
 func Animation() -> void:

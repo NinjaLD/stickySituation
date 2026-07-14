@@ -44,7 +44,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_d2wvv")
 }],
-"loop": 1,
+"loop": true,
 "name": &"Idle",
 "speed": 1.0
 }, {
@@ -55,7 +55,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qlg0r")
 }],
-"loop": 1,
+"loop": true,
 "name": &"Jump",
 "speed": 4.0
 }, {
@@ -72,7 +72,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ur7pv")
 }],
-"loop": 1,
+"loop": true,
 "name": &"Walk",
 "speed": 5.0
 }]
@@ -100,3 +100,5 @@ frame_progress = 0.9813373
 position = Vector2(-6.666667, 0.6666667)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_v84v7")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2029314000]

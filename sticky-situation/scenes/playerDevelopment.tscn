@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bxg8v63xhemp"]
 
 [ext_resource type="Texture2D" uid="uid://ogyw4h0qerbi" path="res://assets/icon.svg" id="1_40edo"]
-[ext_resource type="PackedScene" uid="uid://bc0x6exx3qr7y" path="res://scenes/player.tscn" id="2_40edo"]
+[ext_resource type="PackedScene" uid="uid://bc0x6exx3qr7y" path="res://assets/Prefabs/player.tscn" id="2_40edo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v84v7"]
 
@@ -46,4 +46,3 @@ scale = Vector2(1, 0.99999994)
 texture = ExtResource("1_40edo")
 
 [node name="CharacterBody2D" parent="." unique_id=1909432878 instance=ExtResource("2_40edo")]
-jumpVelocity = Vector2(0, 1000)

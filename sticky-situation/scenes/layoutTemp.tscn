@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bttbv6hva0n81" path="res://assets/sprites/Bush.png" id="1_g1afp"]
 [ext_resource type="Texture2D" uid="uid://lplx0ikv6rna" path="res://assets/sprites/world_tileset.png" id="2_gb1hp"]
-[ext_resource type="PackedScene" uid="uid://bc0x6exx3qr7y" path="res://scenes/player.tscn" id="3_gb1hp"]
+[ext_resource type="PackedScene" uid="uid://bc0x6exx3qr7y" path="res://assets/Prefabs/player.tscn" id="3_gb1hp"]
 [ext_resource type="Script" uid="uid://chbplxehjs76o" path="res://scripts/killzone.gd" id="4_d4ocj"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ax3ve"]
