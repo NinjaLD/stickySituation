@@ -24,13 +24,32 @@ position = Vector2(200, 65)
 scale = Vector2(8.5, 8.5)
 texture = ExtResource("2_j40ox")
 
-[node name="exitButton" type="Button" parent="Menu Handler" unique_id=607396732]
-offset_left = -517.0
-offset_top = 60.0
-offset_right = 60.0
-offset_bottom = 241.0
+[node name="exitButton" type="Button" parent="Menu Handler" unique_id=2047018064]
+offset_left = -487.0
+offset_top = 73.0
+offset_right = -85.0
+offset_bottom = 246.0
 theme_override_font_sizes/font_size = 120
 text = "EXIT"
 
+[node name="levelTestingButton" type="Button" parent="Menu Handler" unique_id=612209796]
+offset_left = 94.0
+offset_top = -237.0
+offset_right = 531.0
+offset_bottom = -64.0
+theme_override_font_sizes/font_size = 60
+text = "LEVEL TESTING"
+
+[node name="playerDevelopmentButton" type="Button" parent="Menu Handler" unique_id=969252329]
+offset_left = 82.0
+offset_top = 70.0
+offset_right = 519.0
+offset_bottom = 243.0
+theme_override_font_sizes/font_size = 60
+text = "PLAYER 
+DEVELOPMENT"
+
 [connection signal="pressed" from="Menu Handler/playButton" to="Menu Handler" method="_on_play_button_pressed"]
 [connection signal="pressed" from="Menu Handler/exitButton" to="Menu Handler" method="_on_exit_button_pressed"]
+[connection signal="pressed" from="Menu Handler/levelTestingButton" to="Menu Handler" method="_on_level_testing_button_pressed"]
+[connection signal="pressed" from="Menu Handler/playerDevelopmentButton" to="Menu Handler" method="_on_player_development_button_pressed"]
