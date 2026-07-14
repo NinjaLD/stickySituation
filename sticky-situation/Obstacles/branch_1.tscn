@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://bdxxlnw757npd"]
+
+[ext_resource type="Texture2D" path="res://icon.svg" id="1_w47rv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y6px5"]
+radius = 23.442024
+height = 96.843216
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5el4y"]
+radius = 10.222937
+height = 45.371178
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tbpsw"]
+size = Vector2(28.369091, 65.95952)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3lowb"]
+size = Vector2(17.93871, 18.113626)
+
+[node name="Branch1" type="Area2D" unique_id=1384864160]
+rotation = 0.0022613122
+
+[node name="Branch_Part1" type="Sprite2D" parent="." unique_id=542367979]
+position = Vector2(0.014556885, -1.7430207)
+scale = Vector2(-0.96967494, 0.25553617)
+texture = ExtResource("1_w47rv")
+
+[node name="Branch_Collision1" type="CollisionShape2D" parent="." unique_id=522435257]
+position = Vector2(-0.4262542, -1.4977348)
+scale = Vector2(3.5608096, 0.36027294)
+shape = SubResource("CapsuleShape2D_y6px5")
+
+[node name="Branch_Part2" type="Sprite2D" parent="." unique_id=482667678]
+position = Vector2(96.79265, -17.832857)
+rotation = -0.3380427
+scale = Vector2(0.7914684, 0.2864876)
+texture = ExtResource("1_w47rv")
+
+[node name="Branch_Collision2" type="CollisionShape2D" parent="." unique_id=1582370118]
+position = Vector2(96.959045, -18.219305)
+rotation = -0.3255575
+scale = Vector2(5.0731273, 0.9366568)
+shape = SubResource("CapsuleShape2D_5el4y")
+
+[node name="Branch_Part3" type="Sprite2D" parent="." unique_id=1831489194]
+position = Vector2(74.07219, 31.83258)
+rotation = 0.8630447
+scale = Vector2(0.50960886, 0.21437669)
+texture = ExtResource("1_w47rv")
+
+[node name="Branch_Collision3" type="CollisionShape2D" parent="." unique_id=237737084]
+position = Vector2(73.49514, 31.482374)
+rotation = -0.7146452
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_tbpsw")
+
+[node name="Branch_Part4" type="Sprite2D" parent="." unique_id=586693821]
+position = Vector2(-106.06471, 6.6084704)
+rotation = -0.12732849
+scale = Vector2(1, 0.26917318)
+texture = ExtResource("1_w47rv")
+
+[node name="Branch_Collision4" type="CollisionShape2D" parent="." unique_id=1917216188]
+position = Vector2(-106.126526, 6.6306243)
+rotation = 3.0126429
+scale = Vector2(7.197963, -1.8351339)
+shape = SubResource("RectangleShape2D_3lowb")
