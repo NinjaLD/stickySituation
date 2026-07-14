@@ -46,3 +46,4 @@ scale = Vector2(1, 0.99999994)
 texture = ExtResource("1_40edo")
 
 [node name="CharacterBody2D" parent="." unique_id=1909432878 instance=ExtResource("2_40edo")]
+jumpVelocity = Vector2(0, 1000)
