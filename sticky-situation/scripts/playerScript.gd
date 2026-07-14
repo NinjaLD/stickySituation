@@ -1,9 +1,10 @@
 extends CharacterBody2D
 
-@export var gravityAccel : float
-@export var walkAccel : float
-@export var walkSpeed : float
-@export var jumpVelocity : float
+@export var gravityAccel : int
+@export var walkAccel : int
+@export var walkSpeed : int
+@export var decceleration : int
+@export var jumpVelocity : int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,20 +16,36 @@ func _process(delta: float) -> void:
 
 func _physics_process(delta: float) -> void:
 	gravity()
-	Walk()
+	if is_on_floor():
+		Walk()
+	Jump()
 	
 	move_and_slide()
 
 func gravity() -> void:
 	if not is_on_floor():
 		velocity.y += gravityAccel
-		print(velocity)
 
-func GetDir() -> float:
+func GetInputDir() -> float:
 	return Input.get_axis("moveLeft", "moveRight")
 
 func Walk() -> void:
-	velocity.x *= GetDir() * walkAccel
+	var velocityDir
+	if velocity.x > 0:
+		velocityDir = 1
+	elif velocity.x < 0:
+		velocityDir = -1
+	else:
+		velocityDir = 0
+	
+	if GetInputDir() == 0:
+		velocity.x = maxf(abs(velocity.x) - decceleration, 0) * velocityDir
+		pass
+	else:
+		velocity.x = clampf(velocity.x + GetInputDir() * walkAccel, -walkSpeed, walkSpeed)
 
 func Jump() -> void:
-	velocity.y = jumpVelocity
+	if Input.is_action_just_pressed("jump") and is_on_floor():
+		velocity.y = jumpVelocity
+		velocity.x += 0.5 * velocity.x
+		print(velocity.x)
