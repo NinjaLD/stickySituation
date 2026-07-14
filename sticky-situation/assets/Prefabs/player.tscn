@@ -88,8 +88,6 @@ gravityAccel = 25
 walkAccel = 15
 walkSpeed = 600
 decceleration = 10
-minVerticalVelocity = 500
-maxVerticalVelocity = 1500
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2002029042]
 sprite_frames = SubResource("SpriteFrames_4nyrb")
