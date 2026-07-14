@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@onready var animatedSprite = $AnimatedSprite2D
 @export var gravityAccel : int
 @export var walkAccel : int
 @export var walkSpeed : int
@@ -15,6 +16,8 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		Walk()
 	Jump()
+	Animation()
+	AnimationDirection()
 	
 	move_and_slide()
 
@@ -49,3 +52,16 @@ func Jump() -> void:
 		velocity.y = -jumpVelocity.y
 		velocity.x += jumpVelocity.x * velocity.x # change to be for hold jump is mor boing boing
 		print(velocity)
+
+func Animation() -> void:
+	if is_on_floor():
+		if GetInputDir() == 0:
+			animatedSprite.play("Idle")
+		else:
+			animatedSprite.play("Walk")
+	else:
+		animatedSprite.play("Jump")
+
+func AnimationDirection() -> void:
+	if GetInputDir() > 0:
+		animatedSprite.flip_h
