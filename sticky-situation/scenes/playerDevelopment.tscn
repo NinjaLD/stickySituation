@@ -24,8 +24,8 @@ scale = Vector2(1, 0.99999994)
 texture = ExtResource("1_40edo")
 
 [node name="Platform2" type="StaticBody2D" parent="Level" unique_id=1500670559]
-position = Vector2(101, 197)
-scale = Vector2(1.0320015, 1.0910002)
+position = Vector2(101.00001, 205.99998)
+scale = Vector2(1.0320015, 0.65099835)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Platform2" unique_id=1504328379]
 scale = Vector2(6.41, 6.41)
@@ -49,8 +49,11 @@ texture = ExtResource("1_40edo")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=2043302907]
 script = ExtResource("1_g8wdq")
-gravityAccel = 10.0
-walkAccel = 1000.0
+gravityAccel = 25
+walkAccel = 15
+walkSpeed = 600
+decceleration = 10
+jumpVelocity = -600
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=159293901]
 position = Vector2(-56, -40)
