@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cmlc7ylnqguat"]
 
-[ext_resource type="Texture2D" uid="uid://ogyw4h0qerbi" path="res://icon.svg" id="1_uwrxv"]
+[ext_resource type="Texture2D" uid="uid://ogyw4h0qerbi" path="res://assets/icon.svg" id="1_uwrxv"]
 
 [node name="Game" type="Node2D" unique_id=519499833]
 
