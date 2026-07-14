@@ -9,6 +9,20 @@
 
 [node name="Level" type="Node" parent="." unique_id=173837901]
 
+[node name="Bouncy Leaf" type="StaticBody2D" parent="Level" unique_id=345930675 groups=["bouncyLeaf"]]
+modulate = Color(0, 18.892157, 0, 1)
+position = Vector2(213, 189.00002)
+rotation = -3.1415927
+scale = Vector2(0.95690715, -0.27745676)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Bouncy Leaf" unique_id=117353936]
+scale = Vector2(6.41, 6.41)
+shape = SubResource("RectangleShape2D_v84v7")
+
+[node name="Sprite" type="Sprite2D" parent="Level/Bouncy Leaf" unique_id=168545039]
+scale = Vector2(1, 0.99999994)
+texture = ExtResource("1_40edo")
+
 [node name="Platform" type="StaticBody2D" parent="Level" unique_id=799557237]
 position = Vector2(0, 268)
 scale = Vector2(9.672, 0.371)

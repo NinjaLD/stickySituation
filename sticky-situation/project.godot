@@ -15,6 +15,10 @@ run/main_scene="uid://dfrhu1w5058l2"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://assets/icon.svg"
 
+[global_group]
+
+bouncyLeaf=""
+
 [input]
 
 moveLeft={
