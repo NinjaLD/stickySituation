@@ -23,6 +23,7 @@ func _physics_process(delta: float) -> void:
 	Jump()
 	Animation()
 	AnimationDirection()
+	print(is_on_floor())
 	
 	move_and_slide()
 
@@ -58,11 +59,10 @@ func Jump() -> void:
 	if Input.is_action_pressed("jump") and is_on_floor():
 		potentialVelocity = minf(potentialVelocity + 0.01, 1)
 	if Input.is_action_just_released("jump") and is_on_floor():
-		#velocity.y = maxf(-(jumpVelBoostY.x + potentialVelocity), -jumpVelBoostY.y)
-		#velocity.x += minf((jumpVelBoostX.x + potentialVelocity), jumpVelBoostX.y) * GetVelocityDir()
 		velocity.y = -(jumpVelBoostY.x + (jumpVelBoostY.y - jumpVelBoostY.x) * potentialVelocity)
 		velocity.x += (jumpVelBoostX.x + (jumpVelBoostX.y - jumpVelBoostX.x) * potentialVelocity) * GetVelocityDir()
 		
+		print(-(jumpVelBoostY.x + (jumpVelBoostY.y - jumpVelBoostY.x) * potentialVelocity))
 		potentialVelocity = 0
 
 #Plays character animations relative to what they are doing
