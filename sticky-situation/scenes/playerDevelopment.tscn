@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bxg8v63xhemp"]
 
-[ext_resource type="Texture2D" path="res://icon.svg" id="1_40edo"]
+[ext_resource type="Texture2D" uid="uid://ogyw4h0qerbi" path="res://assets/icon.svg" id="1_40edo"]
 [ext_resource type="Script" uid="uid://bwfyixbtdaaxm" path="res://scripts/playerScript.gd" id="1_g8wdq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v84v7"]
@@ -47,17 +47,19 @@ shape = SubResource("RectangleShape2D_v84v7")
 scale = Vector2(1, 0.99999994)
 texture = ExtResource("1_40edo")
 
-[node name="Player" type="RigidBody2D" parent="." unique_id=1134663360]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=2043302907]
+script = ExtResource("1_g8wdq")
+gravityAccel = 10.0
+walkAccel = 1000.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=159293901]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=159293901]
 position = Vector2(-56, -40)
 scale = Vector2(4.6875, 3.125)
 shape = SubResource("RectangleShape2D_40edo")
 
-[node name="Sprite" type="Sprite2D" parent="Player" unique_id=1793579716]
+[node name="Sprite" type="Sprite2D" parent="CharacterBody2D" unique_id=1793579716]
 position = Vector2(-56, -40)
 scale = Vector2(0.75, 0.5)
 texture = ExtResource("1_40edo")
-script = ExtResource("1_g8wdq")
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=126788531]
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=126788531]
