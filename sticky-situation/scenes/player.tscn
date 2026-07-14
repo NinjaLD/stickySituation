@@ -91,8 +91,6 @@ decceleration = 10
 minVerticalVelocity = 500
 maxVerticalVelocity = 1500
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1275531803]
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2002029042]
 sprite_frames = SubResource("SpriteFrames_4nyrb")
 animation = &"Jump"
