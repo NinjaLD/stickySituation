@@ -1,3 +1,5 @@
 [gd_scene format=3 uid="uid://bxg8v63xhemp"]
 
 [node name="PlayerDevelopment" type="Node2D" unique_id=2029028004]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=126788531]
