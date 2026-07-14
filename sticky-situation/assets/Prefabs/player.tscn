@@ -85,11 +85,12 @@ height = 49.333336
 scale = Vector2(1.5, 1.5)
 script = ExtResource("1_g2els")
 gravityAccel = 25
-walkAccel = 15
+walkAccel = 25
 walkSpeed = 600
-decceleration = 10
-minVerticalVelocity = 500
-maxVerticalVelocity = 1500
+decceleration = 20
+jumpChargeRate = 0.01
+jumpVelBoostY = Vector2(400, 650)
+jumpVelBoostX = Vector2(250, 500)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2002029042]
 sprite_frames = SubResource("SpriteFrames_4nyrb")
@@ -102,3 +103,4 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_v84v7")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2029314000]
+zoom = Vector2(3, 3)
