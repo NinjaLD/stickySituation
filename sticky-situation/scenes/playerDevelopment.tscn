@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ogyw4h0qerbi" path="res://assets/icon.svg" id="1_40edo"]
 [ext_resource type="PackedScene" uid="uid://bovfskhc23cyk" path="res://assets/Prefabs/bouncy_leaf.tscn" id="1_v84v7"]
 [ext_resource type="PackedScene" uid="uid://bc0x6exx3qr7y" path="res://assets/Prefabs/player.tscn" id="2_40edo"]
+[ext_resource type="PackedScene" path="res://assets/Prefabs/vine.tscn" id="3_4nyrb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v84v7"]
 
@@ -50,6 +51,10 @@ texture = ExtResource("1_40edo")
 position = Vector2(119, 159.00002)
 rotation = 0.7853982
 
+[node name="climbingVine" parent="Level" unique_id=89608185 instance=ExtResource("3_4nyrb")]
+position = Vector2(397, 39)
+
 [node name="CharacterBody2D" parent="." unique_id=1909432878 instance=ExtResource("2_40edo")]
 position = Vector2(23, 0)
 collision_layer = 3
+leafBounceMult = 650

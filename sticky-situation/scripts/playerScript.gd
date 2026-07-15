@@ -5,12 +5,12 @@ extends CharacterBody2D
 @export var walkAccel : int
 @export var walkSpeed : int
 @export var decceleration : int
-#@export var jumpVelocity : Vector2
 @export var jumpChargeRate : float
 @export var jumpVelBoostY : Vector2
 @export var jumpVelBoostX : Vector2
 @export var maxVineVelocity : int
 @export var climbSpeed : int
+@export var leafBounceMult : int
 
 var potentialVelocity : float
 var canClimb : bool
@@ -63,9 +63,8 @@ func Jump() -> void:
 		potentialVelocity = 0
 
 func Bounce(leafDir) -> void:
-	velocity.y = 100 * -sin(leafDir + deg_to_rad(90))
-	velocity.x = 100 * -cos(leafDir + deg_to_rad(90))
-	print(rad_to_deg(leafDir + deg_to_rad(90)))
+	velocity.y = leafBounceMult * -sin(leafDir + deg_to_rad(90))
+	velocity.x = leafBounceMult * -cos(leafDir + deg_to_rad(90)) - velocity.x / 10
 
 func isClimbing() -> void:
 	if velocity.x > maxVineVelocity:
