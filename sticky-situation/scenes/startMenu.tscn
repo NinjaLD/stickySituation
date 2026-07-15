@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dfrhu1w5058l2"]
 
 [ext_resource type="Script" uid="uid://ytwhrchk8l3r" path="res://scripts/menuHandler.gd" id="1_m0w26"]
-[ext_resource type="Texture2D" uid="uid://ccseylo8jjmq7" path="res://Art/Play-Button.png" id="2_j40ox"]
+[ext_resource type="Texture2D" uid="uid://ccseylo8jjmq7" path="res://art/Play-Button.png" id="2_j40ox"]
 
 [node name="StartMenu" type="Node2D" unique_id=968487194]
 

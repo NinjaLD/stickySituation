@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbrvjwyy0cli0"
-path="res://.godot/imported/Summer8.png-321f1dcfbcbc68c575bd3764835b3003.ctex"
+path="res://.godot/imported/Summer8.png-d54098175fa148d64e0ed4bedaef1c7a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Backgrounds/Summer8.png"
-dest_files=["res://.godot/imported/Summer8.png-321f1dcfbcbc68c575bd3764835b3003.ctex"]
+source_file="res://assets/backgrounds/Summer8.png"
+dest_files=["res://.godot/imported/Summer8.png-d54098175fa148d64e0ed4bedaef1c7a.ctex"]
 
 [params]
 

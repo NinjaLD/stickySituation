@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bovfskhc23cyk"]
 
-[ext_resource type="Script" uid="uid://df7i8vc4ogus7" path="res://scripts/bouncy_leaf.gd" id="1_htwr0"]
+[ext_resource type="Script" uid="uid://df7i8vc4ogus7" path="res://scripts/bouncyLeaf.gd" id="1_htwr0"]
 [ext_resource type="Texture2D" uid="uid://ogyw4h0qerbi" path="res://assets/icon.svg" id="1_p4k5o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v84v7"]

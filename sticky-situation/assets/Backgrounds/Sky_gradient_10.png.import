@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c8ta2vudrybdl"
-path="res://.godot/imported/Sky_gradient_10.png-12342371ea051b9c74caf10668cb442c.ctex"
+path="res://.godot/imported/Sky_gradient_10.png-07fa8c4041033df9e6284050ebd5058a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Backgrounds/Sky_gradient_10.png"
-dest_files=["res://.godot/imported/Sky_gradient_10.png-12342371ea051b9c74caf10668cb442c.ctex"]
+source_file="res://assets/backgrounds/Sky_gradient_10.png"
+dest_files=["res://.godot/imported/Sky_gradient_10.png-07fa8c4041033df9e6284050ebd5058a.ctex"]
 
 [params]
 
