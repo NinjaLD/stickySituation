@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxfjlm55d70ml"
-path="res://.godot/imported/Woods 1.png-bb4824144ac4fcb46ce583c22ee87557.ctex"
+uid="uid://da1ogv6l03dib"
+path="res://.godot/imported/Background.png-e9e6691e9e4eb88173dc2821b2a73fa1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Backgrounds/Woods 1.png"
-dest_files=["res://.godot/imported/Woods 1.png-bb4824144ac4fcb46ce583c22ee87557.ctex"]
+source_file="res://assets/Backgrounds/Background.png"
+dest_files=["res://.godot/imported/Background.png-e9e6691e9e4eb88173dc2821b2a73fa1.ctex"]
 
 [params]
 
