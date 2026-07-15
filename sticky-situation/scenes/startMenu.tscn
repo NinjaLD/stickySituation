@@ -12,10 +12,11 @@
 script = ExtResource("1_cpawi")
 
 [node name="playButton" type="Button" parent="Menu Handler" unique_id=62117288]
-offset_left = -486.0
-offset_top = -247.0
-offset_right = -84.0
-offset_bottom = -74.0
+offset_left = -475.0
+offset_top = -85.0
+offset_right = -73.0
+offset_bottom = 88.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
 theme_override_font_sizes/font_size = 120
 text = "
 "
@@ -26,10 +27,11 @@ scale = Vector2(8.5, 8.5)
 texture = ExtResource("2_j40ox")
 
 [node name="exitButton" type="Button" parent="Menu Handler" unique_id=2047018064]
-offset_left = -487.0
-offset_top = 73.0
-offset_right = -85.0
-offset_bottom = 246.0
+offset_left = 75.0
+offset_top = -85.0
+offset_right = 477.0
+offset_bottom = 88.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
 theme_override_font_sizes/font_size = 120
 
 [node name="Sprite2D" type="Sprite2D" parent="Menu Handler/exitButton" unique_id=287988037]
@@ -37,15 +39,5 @@ position = Vector2(200, 65)
 scale = Vector2(8.5, 8.5)
 texture = ExtResource("3_cpawi")
 
-[node name="playerDevelopmentButton" type="Button" parent="Menu Handler" unique_id=969252329]
-offset_left = 82.0
-offset_top = 70.0
-offset_right = 519.0
-offset_bottom = 243.0
-theme_override_font_sizes/font_size = 60
-text = "PLAYER 
-DEVELOPMENT"
-
 [connection signal="pressed" from="Menu Handler/playButton" to="Menu Handler" method="_on_play_button_pressed"]
 [connection signal="pressed" from="Menu Handler/exitButton" to="Menu Handler" method="_on_exit_button_pressed"]
-[connection signal="pressed" from="Menu Handler/playerDevelopmentButton" to="Menu Handler" method="_on_player_development_button_pressed"]

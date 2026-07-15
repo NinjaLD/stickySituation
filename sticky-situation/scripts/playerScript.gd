@@ -19,8 +19,10 @@ var potentialVelocity : float
 var vinesIn : int
 var vineWalking : bool
 var isInMinigame : bool
-var timer
 var minigameTrigger : int
+var won : bool
+var timer
+
 
 # Automatic
 func _physics_process(delta: float) -> void:
@@ -33,7 +35,8 @@ func _physics_process(delta: float) -> void:
 	InMinigame()
 	Animation()
 	AnimationDirection()
-	#Cheat()
+	Won()
+	Cheat()
 	
 	move_and_slide()
 
@@ -55,6 +58,10 @@ func GetVelocityDir() -> int:
 		velocityDir = 0
 	
 	return velocityDir
+
+func Won() -> void:
+	if won == true:
+		get_tree().change_scene_to_file("res://scenes/startMenu.tscn")
 
 func InMinigame() -> void:
 	if vineWalking and minigameTrigger == 0 and not isInMinigame:
@@ -148,7 +155,4 @@ func AnimationDirection() -> void:
 func Cheat() -> void:
 	if Input.is_action_pressed("fly"):
 		velocity.y = -200
-		vinesIn = 1
-	else:
-		vinesIn = 0
-		
+		Walk()
