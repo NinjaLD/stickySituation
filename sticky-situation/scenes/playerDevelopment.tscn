@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bxg8v63xhemp"]
 
 [ext_resource type="Texture2D" uid="uid://ogyw4h0qerbi" path="res://assets/icon.svg" id="1_40edo"]
+[ext_resource type="PackedScene" uid="uid://bovfskhc23cyk" path="res://assets/Prefabs/bouncy_leaf.tscn" id="1_v84v7"]
 [ext_resource type="PackedScene" uid="uid://bc0x6exx3qr7y" path="res://assets/Prefabs/player.tscn" id="2_40edo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v84v7"]
@@ -22,8 +23,8 @@ scale = Vector2(1, 0.99999994)
 texture = ExtResource("1_40edo")
 
 [node name="Platform2" type="StaticBody2D" parent="Level" unique_id=1500670559]
-position = Vector2(101.00001, 205.99998)
-scale = Vector2(1.0320015, 0.65099835)
+position = Vector2(101.00001, 227)
+scale = Vector2(1.0320015, 0.3309984)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Platform2" unique_id=1504328379]
 scale = Vector2(6.41, 6.41)
@@ -45,5 +46,10 @@ shape = SubResource("RectangleShape2D_v84v7")
 scale = Vector2(1, 0.99999994)
 texture = ExtResource("1_40edo")
 
+[node name="Bouncy Leaf" parent="Level" unique_id=594540930 instance=ExtResource("1_v84v7")]
+position = Vector2(217, 222.99998)
+rotation = 0.18459836
+
 [node name="CharacterBody2D" parent="." unique_id=1909432878 instance=ExtResource("2_40edo")]
 position = Vector2(23, 0)
+collision_layer = 3
