@@ -68,6 +68,7 @@ func Bounce() -> void:
 
 func Climb() -> void:
 	if Input.is_action_pressed("climb") and canClimb == true:
+		animatedSprite.play("Climb")
 		velocity.y = -climbSpeed
 		if velocity.x > maxVineVelocity:
 			velocity.x = maxVineVelocity
@@ -82,12 +83,13 @@ func Animation() -> void:
 			animatedSprite.play("Idle")
 		else:
 			animatedSprite.play("Walk")
-	else:
+	elif not canClimb:
 		animatedSprite.play("Jump")
 
 #Flips the sprite depending on the direction they are going
 func AnimationDirection() -> void:
-	if GetInputDir() < 0 and velocity.x < 0:
-		animatedSprite.flip_h = true
-	elif GetInputDir() > 0 and velocity.x > 0:
-		animatedSprite.flip_h = false
+	if not canClimb:
+		if GetInputDir() < 0 and velocity.x < 0:
+			animatedSprite.flip_h = true
+		elif GetInputDir() > 0 and velocity.x > 0:
+			animatedSprite.flip_h = false
