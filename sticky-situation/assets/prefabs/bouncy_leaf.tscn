@@ -51,6 +51,6 @@ shape = SubResource("RectangleShape2D_v84v7")
 [node name="Leaf" type="AnimatedSprite2D" parent="." unique_id=1339095539]
 sprite_frames = SubResource("SpriteFrames_ma7o2")
 animation = &"leafBouncing"
-frame_progress = 0.017406221
+frame_progress = 0.90083444
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
