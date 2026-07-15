@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mmoigtnkefk0"
-path="res://.godot/imported/WIP nest.png-d0ea3986522e32afcc51c0419b9bc8f9.ctex"
+uid="uid://b357f6pch7w1"
+path="res://.godot/imported/nestnobird.png-7ee7c825679ab01a01fb2e0e0d587743.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/WIP nest.png"
-dest_files=["res://.godot/imported/WIP nest.png-d0ea3986522e32afcc51c0419b9bc8f9.ctex"]
+source_file="res://art/nestnobird.png"
+dest_files=["res://.godot/imported/nestnobird.png-7ee7c825679ab01a01fb2e0e0d587743.ctex"]
 
 [params]
 
