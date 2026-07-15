@@ -5,12 +5,12 @@ extends CharacterBody2D
 @export var walkAccel : int
 @export var walkSpeed : int
 @export var decceleration : int
-#@export var jumpVelocity : Vector2
 @export var jumpChargeRate : float
 @export var jumpVelBoostY : Vector2
 @export var jumpVelBoostX : Vector2
 @export var maxVineVelocity : int
 @export var climbSpeed : int
+@export var leafBounceMult : int
 
 var potentialVelocity : float
 var canClimb : bool
@@ -47,7 +47,6 @@ func GetVelocityDir() -> int:
 	return velocityDir
 
 func Walk() -> void:
-	
 	if GetInputDir() == 0:
 		velocity.x = maxf(abs(velocity.x) - decceleration, 0) * GetVelocityDir()
 		pass 
@@ -63,25 +62,27 @@ func Jump() -> void:
 		
 		potentialVelocity = 0
 
-func Bounce() -> void:
-	pass
-func Climbing() -> void:
+func Bounce(leafDir) -> void:
+	velocity.y = leafBounceMult * -sin(leafDir + deg_to_rad(90))
+	velocity.x = leafBounceMult * -cos(leafDir + deg_to_rad(90)) - velocity.x / 10
+
+func isClimbing() -> void:
 	if velocity.x > maxVineVelocity:
 		velocity.x = maxVineVelocity
 	elif velocity.x < -maxVineVelocity:
 		velocity.x = -maxVineVelocity
-		
+
 func Climb() -> void:
 	if Input.is_action_pressed("climb") and canClimb == true:
 		animatedSprite.play("Climb")
 		velocity.y = -climbSpeed
-		Climbing()
+		isClimbing()
 	elif Input.is_action_pressed("descend"):
 		velocity.y = climbSpeed
-		Climbing()
+		isClimbing()
 	elif canClimb == true:
 		velocity.y = 0
-	
+
 #Plays character animations relative to what they are doing
 func Animation() -> void:
 	if is_on_floor():
