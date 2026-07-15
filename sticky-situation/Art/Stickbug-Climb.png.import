@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d0ct3uew1ebjg"
-path="res://.godot/imported/Stickbug-Climb.png-187ca06523050e9960d5d6989bf8c378.ctex"
+path="res://.godot/imported/Stickbug-Climb.png-21a9616b0a08d692ac190d12f25f3d28.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Stickbug-Climb.png"
-dest_files=["res://.godot/imported/Stickbug-Climb.png-187ca06523050e9960d5d6989bf8c378.ctex"]
+source_file="res://art/Stickbug-Climb.png"
+dest_files=["res://.godot/imported/Stickbug-Climb.png-21a9616b0a08d692ac190d12f25f3d28.ctex"]
 
 [params]
 

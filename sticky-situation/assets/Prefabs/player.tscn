@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bc0x6exx3qr7y"]
 
-[ext_resource type="Texture2D" uid="uid://bvlo2y1mssebb" path="res://Art/Stickbug-Spritesheet.png" id="1_3vyb7"]
+[ext_resource type="Texture2D" uid="uid://bvlo2y1mssebb" path="res://art/Stickbug-Spritesheet.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://bwfyixbtdaaxm" path="res://scripts/playerScript.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://b35rnjwg1t411" path="res://Art/Stickbug-Spritesheet-sheet.png" id="2_nnomm"]
+[ext_resource type="Texture2D" uid="uid://b35rnjwg1t411" path="res://art/Stickbug-Spritesheet-sheet.png" id="2_nnomm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6qa2l"]
 atlas = ExtResource("2_nnomm")

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://i6ve3hdx3bx1"
-path="res://.godot/imported/Leaf-Anim-Sheet.png-ce7aa62887ec3b24cc263252c649dada.ctex"
+path="res://.godot/imported/Leaf-Anim-Sheet.png-fd3e462ff1eee8196ccdba62fdcf7c2e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Leaf-Anim-Sheet.png"
-dest_files=["res://.godot/imported/Leaf-Anim-Sheet.png-ce7aa62887ec3b24cc263252c649dada.ctex"]
+source_file="res://art/Leaf-Anim-Sheet.png"
+dest_files=["res://.godot/imported/Leaf-Anim-Sheet.png-fd3e462ff1eee8196ccdba62fdcf7c2e.ctex"]
 
 [params]
 
