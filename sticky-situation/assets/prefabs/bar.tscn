@@ -1,11 +1,17 @@
 [gd_scene format=3 uid="uid://b4rd20747vvaq"]
 
+[ext_resource type="Script" uid="uid://buod81ratvj4v" path="res://scripts/barMove.gd" id="1_p0ry8"]
 [ext_resource type="Texture2D" uid="uid://ogyw4h0qerbi" path="res://assets/icon.svg" id="1_pn14v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_immph"]
 
 [node name="Bar" type="Area2D" unique_id=1809461455]
 scale = Vector2(0.25, 0.9)
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_p0ry8")
+speed = 200
+barDistance = 200
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1849875011]
 scale = Vector2(6.435, 6.435)
@@ -13,3 +19,6 @@ shape = SubResource("RectangleShape2D_immph")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1333425259]
 texture = ExtResource("1_pn14v")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
