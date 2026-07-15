@@ -630,6 +630,24 @@ scale = Vector2(0.5, 0.5)
 [node name="Bouncy Leaf12" parent="Gameplay" unique_id=494726813 instance=ExtResource("12_dinhu")]
 position = Vector2(174, -2333)
 
+[node name="climbingVine2" parent="Gameplay" unique_id=844714631 instance=ExtResource("13_kvuet")]
+position = Vector2(-380, -592)
+rotation = 8.742278e-08
+scale = Vector2(0.5, 0.5)
+
+[node name="Bouncy Leaf3" parent="Gameplay" unique_id=53092168 instance=ExtResource("12_dinhu")]
+position = Vector2(-51.000046, -752.00006)
+rotation = -0.43955877
+
+[node name="walkingVine7" parent="Gameplay" unique_id=1863511629 instance=ExtResource("14_trtic")]
+position = Vector2(-382, -873)
+
+[node name="Bouncy Leaf4" parent="Gameplay" unique_id=1274531347 instance=ExtResource("12_dinhu")]
+position = Vector2(-347, -1022)
+
+[node name="climbingVine31" parent="Gameplay" unique_id=517807800 instance=ExtResource("13_kvuet")]
+position = Vector2(-338, -1146)
+
 [node name="Nest" type="Node2D" parent="Gameplay" unique_id=2068762846]
 position = Vector2(-74, -3441)
 script = ExtResource("9_ssvqc")
@@ -675,6 +693,7 @@ shape = SubResource("RectangleShape2D_ssvqc")
 
 [node name="Player" parent="." unique_id=1909432878 instance=ExtResource("11_kvpfn")]
 z_index = 4095
+position = Vector2(-1, -2)
 
 [node name="Ground(s)" type="Node" parent="." unique_id=905198341]
 
