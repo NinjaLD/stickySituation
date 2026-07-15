@@ -524,22 +524,22 @@ position = Vector2(442, -511)
 position = Vector2(600, -544)
 
 [node name="Bouncy Leaf9" parent="Gameplay" unique_id=1848861492 instance=ExtResource("12_dinhu")]
-position = Vector2(772.99994, -496)
+position = Vector2(770.00006, -511.00003)
 rotation = -0.0837758
 
 [node name="climbingVine12" parent="Gameplay" unique_id=83248747 instance=ExtResource("13_kvuet")]
-position = Vector2(717, -731)
+position = Vector2(720, -744)
 
 [node name="climbingVine13" parent="Gameplay" unique_id=1155430569 instance=ExtResource("13_kvuet")]
-position = Vector2(718, -801)
+position = Vector2(720, -818)
 
 [node name="climbingVine14" parent="Gameplay" unique_id=2114936841 instance=ExtResource("13_kvuet")]
-position = Vector2(720, -875)
+position = Vector2(720, -892)
 rotation = 8.742278e-08
 scale = Vector2(0.5, 0.5)
 
 [node name="climbingVine15" parent="Gameplay" unique_id=1568847408 instance=ExtResource("13_kvuet")]
-position = Vector2(721, -948)
+position = Vector2(720, -965)
 
 [node name="climbingVine16" parent="Gameplay" unique_id=1782646574 instance=ExtResource("13_kvuet")]
 position = Vector2(360, -669)
@@ -558,7 +558,7 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(414, -773)
 
 [node name="Bouncy Leaf5" parent="Gameplay" unique_id=1366173649 instance=ExtResource("12_dinhu")]
-position = Vector2(652.99994, -998)
+position = Vector2(635, -995)
 rotation = -0.6027755
 
 [node name="Bouncy Leaf8" parent="Gameplay" unique_id=917895927 instance=ExtResource("12_dinhu")]
