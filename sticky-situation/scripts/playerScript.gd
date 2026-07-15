@@ -33,7 +33,7 @@ func _physics_process(delta: float) -> void:
 	InMinigame()
 	Animation()
 	AnimationDirection()
-	#Cheat()
+	Cheat()
 	
 	move_and_slide()
 
