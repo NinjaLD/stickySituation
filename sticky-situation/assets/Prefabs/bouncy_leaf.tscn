@@ -18,10 +18,6 @@ region = Rect2(30, 0, 30, 30)
 atlas = ExtResource("2_htwr0")
 region = Rect2(60, 0, 30, 30)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ogm5s"]
-atlas = ExtResource("2_htwr0")
-region = Rect2(90, 0, 30, 30)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_ma7o2"]
 animations = [{
 "frames": [{
@@ -33,12 +29,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5yd11")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ogm5s")
 }],
 "loop": true,
-"name": &"Leaf Bouncing",
+"name": &"leafBouncing",
 "speed": 1.0
 }]
 
@@ -55,9 +48,9 @@ rotation = 3.1415925
 scale = Vector2(6.1337748, -1.7784978)
 shape = SubResource("RectangleShape2D_v84v7")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1339095539]
+[node name="Leaf" type="AnimatedSprite2D" parent="." unique_id=1339095539]
 sprite_frames = SubResource("SpriteFrames_ma7o2")
-animation = &"Leaf Bouncing"
-frame_progress = 0.7005673
+animation = &"leafBouncing"
+frame_progress = 0.017406221
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
