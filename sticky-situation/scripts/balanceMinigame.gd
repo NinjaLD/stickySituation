@@ -19,9 +19,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	KeyPress()
 	if count == 0:
-		self.queue_free() # Fail Loser
-		player.position.y =+ 0.1
 		player.isInMinigame = false
+		player.vineWalking = false
+		player.velocity.y = -400
+		player.velocity.x = 500 * (1 if randi_range(0, 1) == 1 else -1)
+		print(player.velocity)
+		self.queue_free() # Fail Loser
 		
 	if spawns == 0:
 		var anotherTimer = Timer.new()
@@ -50,8 +53,8 @@ func _on_timer_timeout() -> void:
 	get_tree().queue_delete(timer)
 
 func _on_another_timer_timeout() -> void:
-	self.queue_free() # stay on vine
 	player.isInMinigame = false
+	self.queue_free() # stay on vine
 
 # Custom
 func SpawnTimer() -> void:
