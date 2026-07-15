@@ -438,6 +438,8 @@ layer_0/tile_data = PackedInt32Array(720860, 3, 0, 720861, 3, 0, 720862, 3, 0, 7
 [node name="CharacterBody2D" parent="." unique_id=1909432878 instance=ExtResource("3_gb1hp")]
 z_index = 2
 position = Vector2(3, 136)
+maxVineVelocity = 100
+climbSpeed = 50
 
 [node name="Camera2D2" type="Camera2D" parent="CharacterBody2D" unique_id=1229662138]
 position = Vector2(-1.9073486e-06, -1.5377998e-05)
