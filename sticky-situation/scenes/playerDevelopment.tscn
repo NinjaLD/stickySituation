@@ -4,12 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://bovfskhc23cyk" path="res://assets/prefabs/bouncy_leaf.tscn" id="1_v84v7"]
 [ext_resource type="PackedScene" uid="uid://bc0x6exx3qr7y" path="res://assets/prefabs/player.tscn" id="2_40edo"]
 [ext_resource type="PackedScene" uid="uid://b75sxg3b8yh54" path="res://assets/prefabs/vine.tscn" id="3_4nyrb"]
-[ext_resource type="Script" uid="uid://d17ew8cki6xb7" path="res://scripts/balanceMinigame.gd" id="5_drt20"]
+[ext_resource type="PackedScene" uid="uid://cjeoffgb1b8lv" path="res://assets/prefabs/balance_minigame.tscn" id="5_drt20"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v84v7"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_drt20"]
-size = Vector2(130, 130)
 
 [node name="PlayerDevelopment" type="Node2D" unique_id=2029028004]
 
@@ -65,20 +62,7 @@ position = Vector2(397, 39)
 [node name="CharacterBody2D" parent="." unique_id=1909432878 instance=ExtResource("2_40edo")]
 collision_layer = 3
 
-[node name="Balance Minigame" type="Node2D" parent="CharacterBody2D" unique_id=1959991007]
+[node name="Balance Minigame" parent="CharacterBody2D" unique_id=1983109531 instance=ExtResource("5_drt20")]
 position = Vector2(0, -100)
-script = ExtResource("5_drt20")
-
-[node name="Center" type="Area2D" parent="CharacterBody2D/Balance Minigame" unique_id=616240904]
-scale = Vector2(0.5, 1)
-collision_layer = 0
-collision_mask = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Balance Minigame/Center" unique_id=1472945314]
-shape = SubResource("RectangleShape2D_drt20")
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/Balance Minigame/Center" unique_id=473170416]
-texture = ExtResource("1_40edo")
-
-[connection signal="area_entered" from="CharacterBody2D/Balance Minigame/Center" to="CharacterBody2D/Balance Minigame" method="_on_area_entered"]
-[connection signal="area_exited" from="CharacterBody2D/Balance Minigame/Center" to="CharacterBody2D/Balance Minigame" method="_on_area_exited"]
+spawnsRange = Vector2(5, 10)
+count = 3
