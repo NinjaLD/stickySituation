@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dfrhu1w5058l2"]
 
-[ext_resource type="Script" uid="uid://ytwhrchk8l3r" path="res://scripts/menuHandler.gd" id="1_m0w26"]
+[ext_resource type="Script" uid="uid://ytwhrchk8l3r" path="res://scripts/menuHandler.gd" id="1_cpawi"]
 [ext_resource type="Texture2D" uid="uid://ccseylo8jjmq7" path="res://art/Play-Button.png" id="2_j40ox"]
 [ext_resource type="Texture2D" uid="uid://b2u5uy2hkaevr" path="res://art/Exit-Button.png" id="3_cpawi"]
 
@@ -9,7 +9,7 @@
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2065483029]
 
 [node name="Menu Handler" type="Node" parent="." unique_id=1599065744]
-script = ExtResource("1_m0w26")
+script = ExtResource("1_cpawi")
 
 [node name="playButton" type="Button" parent="Menu Handler" unique_id=62117288]
 offset_left = -486.0
