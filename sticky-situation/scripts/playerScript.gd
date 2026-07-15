@@ -56,6 +56,8 @@ func GetVelocityDir() -> int:
 	
 	return velocityDir
 
+func Won() -> void:
+	pass
 func InMinigame() -> void:
 	if vineWalking and minigameTrigger == 0 and not isInMinigame:
 		timer = Timer.new()

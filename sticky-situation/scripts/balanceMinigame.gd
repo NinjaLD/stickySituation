@@ -8,6 +8,7 @@ var spawns : int
 var balanceBarPrefab = preload("res://assets/prefabs/bar.tscn")
 var touchingLeft : int
 var touchingRight : int
+var balanceBarTemp
 var timer
 
 # Default
@@ -65,7 +66,7 @@ func SpawnTimer() -> void:
 
 func BarSpawn() -> void:
 	if spawns > 0:
-		var balanceBarTemp = balanceBarPrefab.instantiate()
+		balanceBarTemp = balanceBarPrefab.instantiate()
 		balanceBarTemp.dir = 1 if randi_range(0,1) == 0 else -1
 		balanceBarTemp.position.x = balanceBarTemp.barDistance * -balanceBarTemp.dir
 		self.add_child(balanceBarTemp)
@@ -76,11 +77,13 @@ func KeyPress() -> void:
 		if touchingLeft > 0:
 			touchingLeft = 0
 			count += 1
+			#self.remove_child(balanceBarTemp)
 		else:
 			count -= 1
 	if Input.is_action_just_pressed("balanceRight"):
 		if touchingRight > 0:
 			touchingRight = 0
 			count += 1
+			#self.remove_child(balanceBarTemp)
 		else:
 			count -= 1
