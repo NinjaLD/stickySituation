@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bvlo2y1mssebb" path="res://art/Stickbug-Spritesheet.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://bwfyixbtdaaxm" path="res://scripts/playerScript.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://b35rnjwg1t411" path="res://art/Stickbug-Spritesheet-sheet.png" id="2_nnomm"]
+[ext_resource type="Texture2D" uid="uid://brbs0yfnvnwim" path="res://art/Stickbug-Vinewalk.png" id="4_6rjsx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6qa2l"]
 atlas = ExtResource("2_nnomm")
@@ -44,13 +45,13 @@ region = Rect2(128, 64, 64, 64)
 atlas = ExtResource("1_3vyb7")
 region = Rect2(192, 64, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5ov36"]
-atlas = ExtResource("1_3vyb7")
-region = Rect2(0, 256, 64, 64)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_6rjsx"]
-atlas = ExtResource("1_3vyb7")
-region = Rect2(64, 256, 64, 64)
+atlas = ExtResource("4_6rjsx")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hdmdu"]
+atlas = ExtResource("4_6rjsx")
+region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
 atlas = ExtResource("1_3vyb7")
@@ -117,10 +118,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5ov36")
+"texture": SubResource("AtlasTexture_6rjsx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6rjsx")
+"texture": SubResource("AtlasTexture_hdmdu")
 }],
 "loop": true,
 "name": &"Vine",

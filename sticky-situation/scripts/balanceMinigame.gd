@@ -1,15 +1,32 @@
 extends Node2D
 
-var misses : int
+var count : int = 3
 @onready var center = $Center
 var balanceBarPrefab = preload("res://assets/prefabs/bar.tscn")
+var touchingLeft : int
+var touchingRight : int
 
 # Default
 func _ready() -> void:
 	BarSpawn()
 
-func process(delta: float) -> void:
-	pass
+func _process(delta: float) -> void:
+	KeyPress()
+
+func _on_area_entered(area: Area2D) -> void:
+	if area.dir == 1:
+		touchingLeft += 1
+	if area.dir == -1:
+		touchingRight += 1
+
+func _on_area_exited(area: Area2D) -> void:
+	count -=1
+	if area.dir == 1:
+		touchingLeft -= 1
+	if area.dir == -1:
+		touchingRight -= 1
+	print(count)
+	get_tree().queue_delete(area)
 
 # Custom
 func BarSpawn() -> void:
@@ -18,11 +35,18 @@ func BarSpawn() -> void:
 	balanceBarTemp.position.x = balanceBarTemp.barDistance * -balanceBarTemp.dir
 	self.add_child(balanceBarTemp)
 
-func _on_area_exited(area: Area2D) -> void:
-	misses += 1
-	print(misses)
-	get_tree().queue_delete(area)
-
-
-func _on_area_entered(area: Area2D) -> void:
-	pass # Replace with function body.
+func KeyPress() -> void:
+	if Input.is_action_just_pressed("balanceLeft"):
+		if touchingLeft > 0:
+			touchingLeft -= 1
+			count += 1
+		else:
+			count -= 1
+		print(count)
+	if Input.is_action_just_pressed("balanceRight"):
+		if touchingRight > 0:
+			touchingRight -= 1
+			count += 1
+		else:
+			count -= 1
+		print(count)
