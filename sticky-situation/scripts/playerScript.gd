@@ -125,7 +125,7 @@ func Climb() -> void:
 func Animation() -> void:
 	if is_on_floor():
 		if vineWalking:
-			animatedSprite.play("Vine")
+			animatedSprite.play("OnVine")
 		elif GetInputDir() == 0:
 			animatedSprite.play("Idle")
 		else:

@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bwfyixbtdaaxm" path="res://scripts/playerScript.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://b35rnjwg1t411" path="res://art/Stickbug-Spritesheet-sheet.png" id="2_nnomm"]
 [ext_resource type="Texture2D" uid="uid://brbs0yfnvnwim" path="res://art/Stickbug-Vinewalk.png" id="4_6rjsx"]
+[ext_resource type="Texture2D" uid="uid://bosdi0vdadxa2" path="res://art/Stickbug-dance.png" id="5_hdmdu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6qa2l"]
 atlas = ExtResource("2_nnomm")
@@ -52,6 +53,22 @@ region = Rect2(0, 0, 64, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_hdmdu"]
 atlas = ExtResource("4_6rjsx")
 region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dyjkh"]
+atlas = ExtResource("5_hdmdu")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pi27c"]
+atlas = ExtResource("5_hdmdu")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4x4q"]
+atlas = ExtResource("5_hdmdu")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mr52g"]
+atlas = ExtResource("5_hdmdu")
+region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
 atlas = ExtResource("1_3vyb7")
@@ -124,8 +141,25 @@ animations = [{
 "texture": SubResource("AtlasTexture_hdmdu")
 }],
 "loop": 1,
-"name": &"Vine",
+"name": &"OnVine",
 "speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dyjkh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pi27c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k4x4q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mr52g")
+}],
+"loop": 1,
+"name": &"StickbugDance",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -169,7 +203,8 @@ minigameSpawnChance = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2002029042]
 sprite_frames = SubResource("SpriteFrames_4nyrb")
-animation = &"Vine"
+animation = &"StickbugDance"
+frame_progress = 0.06426229
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=904624577]
 position = Vector2(-6.666667, 0.6666667)
