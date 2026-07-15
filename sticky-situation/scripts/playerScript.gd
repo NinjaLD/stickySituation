@@ -19,7 +19,7 @@ var vineWalking : bool
 # Automatic
 func _physics_process(delta: float) -> void:
 	gravity()
-	if is_on_floor():
+	if is_on_floor() or vinesIn >= 1:
 		Walk()
 	Jump()
 	Climb()
@@ -89,6 +89,7 @@ func Climb() -> void:
 		isOnVine()
 	elif vinesIn >= 1:
 		velocity.y = 0
+		isOnVine()
 
 #Plays character animations relative to what they are doing
 func Animation() -> void:
