@@ -65,17 +65,23 @@ func Jump() -> void:
 
 func Bounce() -> void:
 	pass
-
+func Climbing() -> void:
+	if velocity.x > maxVineVelocity:
+		velocity.x = maxVineVelocity
+	elif velocity.x < -maxVineVelocity:
+		velocity.x = -maxVineVelocity
+		
 func Climb() -> void:
 	if Input.is_action_pressed("climb") and canClimb == true:
 		animatedSprite.play("Climb")
 		velocity.y = -climbSpeed
-		if velocity.x > maxVineVelocity:
-			velocity.x = maxVineVelocity
-		elif velocity.x < -maxVineVelocity:
-			velocity.x = -maxVineVelocity
+		Climbing()
+	elif Input.is_action_pressed("descend"):
+		velocity.y = climbSpeed
+		Climbing()
 	elif canClimb == true:
 		velocity.y = 0
+	
 #Plays character animations relative to what they are doing
 func Animation() -> void:
 	if is_on_floor():

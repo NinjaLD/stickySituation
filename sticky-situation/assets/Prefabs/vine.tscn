@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ihw1h"]
 size = Vector2(82, 141)
 
-[node name="Vine" type="Area2D" unique_id=89608185]
+[node name="climbingVine" type="Area2D" unique_id=89608185]
 collision_mask = 2
 script = ExtResource("1_vqrit")
 
