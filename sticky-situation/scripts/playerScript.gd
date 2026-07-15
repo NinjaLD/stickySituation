@@ -14,6 +14,7 @@ extends CharacterBody2D
 
 var potentialVelocity : float
 var canClimb : bool
+var vineWalking : bool
 
 # Automatic
 func _physics_process(delta: float) -> void:
@@ -22,6 +23,7 @@ func _physics_process(delta: float) -> void:
 		Walk()
 	Jump()
 	Climb()
+	vineWalker()
 	Animation()
 	AnimationDirection()
 	
@@ -54,19 +56,24 @@ func Walk() -> void:
 		velocity.x = clampf(velocity.x + GetInputDir() * walkAccel, -walkSpeed, walkSpeed)
 
 func Jump() -> void:
-	if Input.is_action_pressed("jump") and is_on_floor():
+	if Input.is_action_pressed("jump") and is_on_floor() and not vineWalking:
 		potentialVelocity = minf(potentialVelocity + jumpChargeRate, 1)
-	if Input.is_action_just_released("jump") and is_on_floor():
+	if Input.is_action_just_released("jump") and is_on_floor() and not vineWalking:
 		velocity.y = -(jumpVelBoostY.x + (jumpVelBoostY.y - jumpVelBoostY.x) * potentialVelocity)
 		velocity.x += (jumpVelBoostX.x + (jumpVelBoostX.y - jumpVelBoostX.x) * potentialVelocity) * (velocity.x / walkSpeed)
 		
 		potentialVelocity = 0
 
+func vineWalker() -> void:
+	if vineWalking:
+		isOnVine()
+		
+
 func Bounce(leafDir) -> void:
 	velocity.y = leafBounceMult * -sin(leafDir + deg_to_rad(90))
 	velocity.x = leafBounceMult * -cos(leafDir + deg_to_rad(90)) - velocity.x / 10
 
-func isClimbing() -> void:
+func isOnVine() -> void:
 	if velocity.x > maxVineVelocity:
 		velocity.x = maxVineVelocity
 	elif velocity.x < -maxVineVelocity:
@@ -76,10 +83,10 @@ func Climb() -> void:
 	if Input.is_action_pressed("climb") and canClimb == true:
 		animatedSprite.play("Climb")
 		velocity.y = -climbSpeed
-		isClimbing()
-	elif Input.is_action_pressed("descend"):
+		isOnVine()
+	elif Input.is_action_pressed("descend") and canClimb == true:
 		velocity.y = climbSpeed
-		isClimbing()
+		isOnVine()
 	elif canClimb == true:
 		velocity.y = 0
 
