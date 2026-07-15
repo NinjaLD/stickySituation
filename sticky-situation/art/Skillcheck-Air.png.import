@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csht2kvjaufww"
-path="res://.godot/imported/Skillcheck-Background.png-ea800e33b992698de45acc561f69ef53.ctex"
+uid="uid://dxf8s5jkqs3ju"
+path="res://.godot/imported/Skillcheck-Air.png-42de9dd8c6121c83a19bd2aba4b535f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Skillcheck-Background.png"
-dest_files=["res://.godot/imported/Skillcheck-Background.png-ea800e33b992698de45acc561f69ef53.ctex"]
+source_file="res://art/Skillcheck-Air.png"
+dest_files=["res://.godot/imported/Skillcheck-Air.png-42de9dd8c6121c83a19bd2aba4b535f8.ctex"]
 
 [params]
 
