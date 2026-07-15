@@ -13,6 +13,6 @@ func process(delta: float) -> void:
 # Custom
 func BarSpawn() -> void:
 	var balanceBarTemp = balanceBarPrefab.instantiate()
-	balanceBarTemp.position.x = 100
-	balanceBarTemp.dir = randi_range(0,1) == 0 if -1 else 1
+	balanceBarTemp.dir = 1 if randi_range(0,1) == 0 else -1
+	balanceBarTemp.position.x = balanceBarTemp.barDistance * -balanceBarTemp.dir
 	self.add_child(balanceBarTemp)
