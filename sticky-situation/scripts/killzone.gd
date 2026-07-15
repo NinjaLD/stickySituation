@@ -5,5 +5,5 @@ extends Area2D
 func _on_body_entered(body):
 	timer.start()
 
-func _on_timer_timeout():
+func _on_timer_tiwmeout():
 	get_tree().reload_current_scene()

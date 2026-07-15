@@ -15,15 +15,17 @@ extends CharacterBody2D
 var potentialVelocity : float
 var vinesIn : int
 var vineWalking : bool
+var isInMinigame : bool
 
 # Automatic
 func _physics_process(delta: float) -> void:
-	gravity()
+	Gravity()
 	if is_on_floor() or vinesIn >= 1:
 		Walk()
 	Jump()
 	Climb()
 	vineWalker()
+	InMinigame()
 	Animation()
 	AnimationDirection()
 	#Cheat()
@@ -31,7 +33,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 # Custom
-func gravity() -> void:
+func Gravity() -> void:
 	if not is_on_floor() and vinesIn <= 0:
 		velocity.y += gravityAccel
 
@@ -48,6 +50,14 @@ func GetVelocityDir() -> int:
 		velocityDir = 0
 	
 	return velocityDir
+
+func InMinigame():
+	if isInMinigame == true:
+		Immovable()
+
+func Immovable():
+	if velocity.x != 0:
+		velocity.x = 0
 
 func Walk() -> void:
 	if GetInputDir() == 0:

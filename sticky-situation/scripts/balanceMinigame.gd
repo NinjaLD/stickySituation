@@ -4,6 +4,7 @@ var spawns : int
 @export var spawnsRange : Vector2
 @export var count : int
 @onready var center = $Center
+@onready var player = $".."
 var balanceBarPrefab = preload("res://assets/prefabs/bar.tscn")
 var touchingLeft : int
 var touchingRight : int
@@ -13,11 +14,13 @@ var timer
 func _ready() -> void:
 	spawns = randi_range(spawnsRange.x, spawnsRange.y)
 	SpawnTimer()
+	player.isInMinigame = true
 
 func _process(delta: float) -> void:
 	KeyPress()
 	if count == 0:
 		self.queue_free() # Fail Loser
+		player.isInMinigame = false
 	if spawns == 0:
 		var anotherTimer = Timer.new()
 		anotherTimer.wait_time = 2
@@ -46,6 +49,7 @@ func _on_timer_timeout() -> void:
 
 func _on_another_timer_timeout() -> void:
 	self.queue_free() # stay on vine
+	player.isInMinigame = false
 
 # Custom
 func SpawnTimer() -> void:
