@@ -1,4 +1,4 @@
-extends Sprite2D
+extends Area2D
 
 @export var speed : int
 @export var barDistance : int
