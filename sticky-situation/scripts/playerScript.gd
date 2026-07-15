@@ -23,8 +23,6 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide()
 
-
-
 # Custom
 func gravity() -> void:
 	if not is_on_floor():
@@ -60,6 +58,9 @@ func Jump() -> void:
 		velocity.x += (jumpVelBoostX.x + (jumpVelBoostX.y - jumpVelBoostX.x) * potentialVelocity) * (velocity.x / walkSpeed)
 		
 		potentialVelocity = 0
+
+func Bounce() -> void:
+	pass
 
 #Plays character animations relative to what they are doing
 func Animation() -> void:
