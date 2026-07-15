@@ -78,6 +78,8 @@ func _on_timer_timeout() -> void:
 func Immovable() -> void:
 	if velocity.x != 0:
 		velocity.x = 0
+	if velocity.y != 0:
+		velocity.y = 0
 
 func Walk() -> void:
 	if GetInputDir() == 0:
