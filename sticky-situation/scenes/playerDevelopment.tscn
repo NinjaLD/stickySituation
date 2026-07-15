@@ -11,6 +11,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_drt20"]
 size = Vector2(130, 130)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_immph"]
+
 [node name="PlayerDevelopment" type="Node2D" unique_id=2029028004]
 
 [node name="Level" type="Node" parent="." unique_id=173837901]
@@ -69,11 +71,22 @@ collision_layer = 3
 position = Vector2(0, -100)
 script = ExtResource("5_drt20")
 
-[node name="Center" type="Sprite2D" parent="CharacterBody2D/Balance Minigame" unique_id=473170416]
+[node name="Center" type="Area2D" parent="CharacterBody2D/Balance Minigame" unique_id=616240904]
 scale = Vector2(0.5, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Balance Minigame/Center" unique_id=1472945314]
+shape = SubResource("RectangleShape2D_drt20")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/Balance Minigame/Center" unique_id=473170416]
 texture = ExtResource("1_40edo")
 
-[node name="Area2D" type="Area2D" parent="CharacterBody2D/Balance Minigame/Center" unique_id=616240904]
+[node name="Bar" type="Area2D" parent="CharacterBody2D/Balance Minigame" unique_id=1601046976]
+position = Vector2(100, 0)
+scale = Vector2(0.25, 0.9)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Balance Minigame/Center/Area2D" unique_id=1472945314]
-shape = SubResource("RectangleShape2D_drt20")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Balance Minigame/Bar" unique_id=524513989]
+scale = Vector2(6.435, 6.435)
+shape = SubResource("RectangleShape2D_immph")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/Balance Minigame/Bar" unique_id=1399360055]
+texture = ExtResource("1_40edo")
