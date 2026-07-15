@@ -12,12 +12,15 @@ var minigamePrefab = preload("res://assets/prefabs/balance_minigame.tscn")
 @export var maxVineVelocity : int
 @export var climbSpeed : int
 @export var leafBounceMult : int
+@export var minigameSpawnRate : int
+@export var minigameSpawnChance : int # 100 / value, e.g. if value is 4, chance is 100/4 or 25%
 
 var potentialVelocity : float
 var vinesIn : int
 var vineWalking : bool
 var isInMinigame : bool
-
+var timer
+var minigameTrigger : int
 
 # Automatic
 func _physics_process(delta: float) -> void:
@@ -53,14 +56,26 @@ func GetVelocityDir() -> int:
 	
 	return velocityDir
 
-func InMinigame():
-	if vineWalking:
-		var minigame = minigamePrefab.instantiate()
-		self.add_child(minigame)
+func InMinigame() -> void:
+	if vineWalking and minigameTrigger == 0 and not isInMinigame:
+		timer = Timer.new()
+		timer.wait_time = minigameSpawnRate
+		self.add_child(timer)
+		timer.start()
+		timer.timeout.connect(_on_timer_timeout)
+		minigameTrigger = 1
 	if isInMinigame == true:
 		Immovable()
 
-func Immovable():
+func _on_timer_timeout() -> void:
+	var spawnChance = randi_range(0, 1)
+	if spawnChance == 1 and vineWalking:
+		var minigame = minigamePrefab.instantiate()
+		self.add_child(minigame)
+	minigameTrigger = 0
+	get_tree().queue_delete(timer)
+
+func Immovable() -> void:
 	if velocity.x != 0:
 		velocity.x = 0
 

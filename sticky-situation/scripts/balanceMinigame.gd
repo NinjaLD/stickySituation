@@ -21,6 +21,7 @@ func _process(delta: float) -> void:
 	if count == 0:
 		self.queue_free() # Fail Loser
 		player.isInMinigame = false
+		
 	if spawns == 0:
 		var anotherTimer = Timer.new()
 		anotherTimer.wait_time = 2

@@ -164,6 +164,8 @@ jumpVelBoostX = Vector2(100, 400)
 maxVineVelocity = 50
 climbSpeed = 50
 leafBounceMult = 650
+minigameSpawnRate = 2
+minigameSpawnChance = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2002029042]
 sprite_frames = SubResource("SpriteFrames_4nyrb")

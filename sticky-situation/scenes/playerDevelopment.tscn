@@ -64,5 +64,3 @@ collision_layer = 3
 
 [node name="Balance Minigame" parent="CharacterBody2D" unique_id=1983109531 instance=ExtResource("5_drt20")]
 position = Vector2(0, -100)
-spawnsRange = Vector2(5, 10)
-count = 3

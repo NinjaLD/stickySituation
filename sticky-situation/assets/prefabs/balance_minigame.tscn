@@ -7,7 +7,11 @@
 size = Vector2(130, 130)
 
 [node name="Balance Minigame" type="Node2D" unique_id=1983109531]
+z_index = 14
+position = Vector2(0, -106)
 script = ExtResource("1_ugccx")
+spawnsRange = Vector2(5, 10)
+count = 3
 
 [node name="Center" type="Area2D" parent="." unique_id=246440263]
 scale = Vector2(0.25, 1)
@@ -18,6 +22,7 @@ collision_mask = 4
 shape = SubResource("RectangleShape2D_drt20")
 
 [node name="Sprite2D" type="Sprite2D" parent="Center" unique_id=1285124368]
+z_index = 7
 texture = ExtResource("2_eww4l")
 
 [connection signal="area_entered" from="Center" to="." method="_on_area_entered"]
