@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bc0x6exx3qr7y" path="res://assets/prefabs/player.tscn" id="3_gb1hp"]
 [ext_resource type="Texture2D" uid="uid://bvbqhslwd4a0m" path="res://assets/sprites/wood_tileset.png" id="3_qk5nl"]
 [ext_resource type="Script" uid="uid://chbplxehjs76o" path="res://scripts/killzone.gd" id="4_d4ocj"]
+[ext_resource type="PackedScene" uid="uid://b75sxg3b8yh54" path="res://assets/prefabs/vine.tscn" id="6_r3v6k"]
 [ext_resource type="PackedScene" uid="uid://blk7b7hrf6ke1" path="res://assets/prefabs/walking_vine.tscn" id="7_ax3ve"]
 [ext_resource type="PackedScene" uid="uid://bovfskhc23cyk" path="res://assets/prefabs/bouncy_leaf.tscn" id="8_wal4a"]
 
@@ -463,6 +464,9 @@ rotation = -0.62133723
 
 [node name="walkingVine" parent="." unique_id=279497176 instance=ExtResource("7_ax3ve")]
 position = Vector2(191, 147)
+
+[node name="climbingVine" parent="." unique_id=89608185 instance=ExtResource("6_r3v6k")]
+position = Vector2(-96, 122)
 
 [connection signal="body_entered" from="Killzone" to="Killzone" method="_on_body_entered"]
 [connection signal="timeout" from="Killzone/Timer" to="Killzone" method="_on_timer_timeout"]

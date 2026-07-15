@@ -67,7 +67,6 @@ func Jump() -> void:
 func vineWalker() -> void:
 	if vineWalking:
 		isOnVine()
-		
 
 func Bounce(leafDir) -> void:
 	velocity.y = leafBounceMult * -sin(leafDir + deg_to_rad(90))
@@ -95,12 +94,15 @@ func Climb() -> void:
 #Plays character animations relative to what they are doing
 func Animation() -> void:
 	if is_on_floor():
-		if GetInputDir() == 0:
+		if vineWalking:
+			animatedSprite.play("Vine")
+		elif GetInputDir() == 0:
 			animatedSprite.play("Idle")
 		else:
 			animatedSprite.play("Walk")
 	elif vinesIn <= 0:
 		animatedSprite.play("Jump")
+
 
 #Flips the sprite depending on the direction they are going
 func AnimationDirection() -> void:
