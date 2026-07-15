@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://bxg8v63xhemp"]
+
+[ext_resource type="Texture2D" uid="uid://ogyw4h0qerbi" path="res://assetsz/icon.svg" id="1_ej7os"]
+[ext_resource type="PackedScene" uid="uid://bovfskhc23cyk" path="res://assetsz/prefabsz/bouncy_leaf.tscn" id="2_2jt76"]
+[ext_resource type="PackedScene" uid="uid://b75sxg3b8yh54" path="res://assetsz/prefabsz/vine.tscn" id="3_turej"]
+[ext_resource type="PackedScene" uid="uid://bc0x6exx3qr7y" path="res://assetsz/prefabsz/player.tscn" id="4_iv7cx"]
+[ext_resource type="Script" uid="uid://d17ew8cki6xb7" path="res://scriptsz/balanceMinigame.gd" id="5_41ssm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v84v7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_drt20"]
+size = Vector2(130, 130)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_immph"]
+
+[node name="PlayerDevelopment" type="Node2D" unique_id=2029028004]
+
+[node name="Level" type="Node" parent="." unique_id=173837901]
+
+[node name="Platform" type="StaticBody2D" parent="Level" unique_id=799557237]
+position = Vector2(0, 268)
+scale = Vector2(9.672, 0.371)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Platform" unique_id=1044530365]
+scale = Vector2(6.41, 6.41)
+shape = SubResource("RectangleShape2D_v84v7")
+
+[node name="Sprite" type="Sprite2D" parent="Level/Platform" unique_id=1987148381]
+scale = Vector2(1, 0.99999994)
+texture = ExtResource("1_ej7os")
+
+[node name="Platform2" type="StaticBody2D" parent="Level" unique_id=1500670559]
+position = Vector2(101.00001, 227)
+scale = Vector2(1.0320015, 0.3309984)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Platform2" unique_id=1504328379]
+scale = Vector2(6.41, 6.41)
+shape = SubResource("RectangleShape2D_v84v7")
+
+[node name="Sprite" type="Sprite2D" parent="Level/Platform2" unique_id=1083196671]
+scale = Vector2(1, 0.99999994)
+texture = ExtResource("1_ej7os")
+
+[node name="Platform3" type="StaticBody2D" parent="Level" unique_id=506103300]
+position = Vector2(807, 184)
+scale = Vector2(6.4720025, 1.0910002)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Platform3" unique_id=1990917274]
+scale = Vector2(6.41, 6.41)
+shape = SubResource("RectangleShape2D_v84v7")
+
+[node name="Sprite" type="Sprite2D" parent="Level/Platform3" unique_id=118994219]
+scale = Vector2(1, 0.99999994)
+texture = ExtResource("1_ej7os")
+
+[node name="Bouncy Leaf" parent="Level" unique_id=594540930 instance=ExtResource("2_2jt76")]
+position = Vector2(119, 159.00002)
+rotation = 0.7853982
+
+[node name="Bouncy Leaf2" parent="Level" unique_id=899773640 instance=ExtResource("2_2jt76")]
+position = Vector2(329, 230)
+rotation = -0.44505897
+
+[node name="climbingVine" parent="Level" unique_id=89608185 instance=ExtResource("3_turej")]
+position = Vector2(397, 39)
+
+[node name="CharacterBody2D" parent="." unique_id=1909432878 instance=ExtResource("4_iv7cx")]
+collision_layer = 3
+
+[node name="Balance Minigame" type="Node2D" parent="CharacterBody2D" unique_id=1959991007]
+position = Vector2(0, -100)
+script = ExtResource("5_41ssm")
+
+[node name="Center" type="Area2D" parent="CharacterBody2D/Balance Minigame" unique_id=616240904]
+scale = Vector2(0.5, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Balance Minigame/Center" unique_id=1472945314]
+shape = SubResource("RectangleShape2D_drt20")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/Balance Minigame/Center" unique_id=473170416]
+texture = ExtResource("1_ej7os")
+
+[node name="Bar" type="Area2D" parent="CharacterBody2D/Balance Minigame" unique_id=1601046976]
+position = Vector2(100, 0)
+scale = Vector2(0.25, 0.9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Balance Minigame/Bar" unique_id=524513989]
+scale = Vector2(6.435, 6.435)
+shape = SubResource("RectangleShape2D_immph")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/Balance Minigame/Bar" unique_id=1399360055]
+texture = ExtResource("1_ej7os")

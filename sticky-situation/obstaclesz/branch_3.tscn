@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://bcd30ss4msqxf"]
+
+[ext_resource type="Texture2D" path="res://icon.svg" id="1_7cfjq"]
+[ext_resource type="Texture2D" uid="uid://ogyw4h0qerbi" path="res://assetsz/icon.svg" id="2_hwu68"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0wlwa"]
+size = Vector2(124.08458, 33.196823)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nqmsw"]
+size = Vector2(89.441925, 27.98256)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3it7e"]
+size = Vector2(26.911314, 59.08597)
+
+[node name="Branch3" type="Area2D" unique_id=815663336]
+
+[node name="Branch_Part1" type="Sprite2D" parent="." unique_id=782596433]
+position = Vector2(0.014556885, -1.7430207)
+rotation = 0.7057973
+scale = Vector2(-0.96967494, 0.25553617)
+texture = ExtResource("1_7cfjq")
+
+[node name="Branch_Collision1" type="CollisionShape2D" parent="." unique_id=676480150]
+position = Vector2(-0.03377235, -1.460882)
+rotation = 0.71224725
+shape = SubResource("RectangleShape2D_0wlwa")
+
+[node name="Branch_Part2" type="Sprite2D" parent="." unique_id=871194749]
+position = Vector2(83.99999, 20.000002)
+rotation = -0.17003947
+scale = Vector2(0.6932985, 0.20543541)
+texture = ExtResource("2_hwu68")
+
+[node name="Branch_Collision2" type="CollisionShape2D" parent="." unique_id=1254356895]
+position = Vector2(83.77245, 19.71787)
+rotation = -0.17565472
+shape = SubResource("RectangleShape2D_nqmsw")
+
+[node name="Branch_Part3" type="Sprite2D" parent="." unique_id=885574684]
+position = Vector2(47.27857, 62.55272)
+rotation = 1.3104292
+scale = Vector2(0.46327138, 0.2109375)
+texture = ExtResource("2_hwu68")
+
+[node name="Branch_Collision3" type="CollisionShape2D" parent="." unique_id=657847632]
+position = Vector2(47.036747, 62.46002)
+rotation = -0.25387183
+shape = SubResource("RectangleShape2D_3it7e")

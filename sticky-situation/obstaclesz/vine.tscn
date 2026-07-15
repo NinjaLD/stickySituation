@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c32a73upkkqgl"]
+
+[ext_resource type="Texture2D" uid="uid://ogyw4h0qerbi" path="res://assetsz/icon.svg" id="1_bxsr5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rovuq"]
+size = Vector2(8, 62)
+
+[node name="Vine" type="Area2D" unique_id=50373008]
+
+[node name="Vine_Part" type="Sprite2D" parent="." unique_id=1037270080]
+position = Vector2(0, -1.9073486e-06)
+scale = Vector2(0.06585693, 0.48437497)
+texture = ExtResource("1_bxsr5")
+
+[node name="Vine_Collision" type="CollisionShape2D" parent="." unique_id=1767720041]
+shape = SubResource("RectangleShape2D_rovuq")
