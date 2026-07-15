@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+var minigamePrefab = preload("res://assets/prefabs/balance_minigame.tscn")
 @onready var animatedSprite = $AnimatedSprite2D
 @export var gravityAccel : int
 @export var walkAccel : int
@@ -16,6 +17,7 @@ var potentialVelocity : float
 var vinesIn : int
 var vineWalking : bool
 var isInMinigame : bool
+
 
 # Automatic
 func _physics_process(delta: float) -> void:
@@ -52,6 +54,9 @@ func GetVelocityDir() -> int:
 	return velocityDir
 
 func InMinigame():
+	if vineWalking:
+		var minigame = minigamePrefab.instantiate()
+		self.add_child(minigame)
 	if isInMinigame == true:
 		Immovable()
 
