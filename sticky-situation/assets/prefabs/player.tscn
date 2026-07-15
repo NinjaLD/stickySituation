@@ -107,7 +107,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2qr6b")
 }],
-"loop": 1,
+"loop": true,
 "name": &"Climb",
 "speed": 5.0
 }, {
@@ -118,7 +118,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_d2wvv")
 }],
-"loop": 1,
+"loop": true,
 "name": &"Idle",
 "speed": 1.0
 }, {
@@ -129,7 +129,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qlg0r")
 }],
-"loop": 1,
+"loop": true,
 "name": &"Jump",
 "speed": 4.0
 }, {
@@ -140,7 +140,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_hdmdu")
 }],
-"loop": 1,
+"loop": true,
 "name": &"OnVine",
 "speed": 2.0
 }, {
@@ -157,7 +157,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mr52g")
 }],
-"loop": 1,
+"loop": true,
 "name": &"StickbugDance",
 "speed": 5.0
 }, {
@@ -174,7 +174,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ur7pv")
 }],
-"loop": 1,
+"loop": true,
 "name": &"Walk",
 "speed": 5.0
 }]
