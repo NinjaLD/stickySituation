@@ -1,7 +1,7 @@
 extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
-	body.canClimb = true
+	body.vinesIn += 1
 
 func _on_body_exited(body: Node2D) -> void:
-	body.canClimb = false
+	body.vinesIn -= 1

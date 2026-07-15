@@ -457,11 +457,20 @@ wait_time = 0.2
 position = Vector2(-2, -43)
 shape = SubResource("WorldBoundaryShape2D_m3w0j")
 
-[node name="climbingVine" parent="." unique_id=89608185 instance=ExtResource("6_r3v6k")]
-position = Vector2(-170, 115)
-
 [node name="walkingVine" parent="." unique_id=279497176 instance=ExtResource("7_ax3ve")]
 position = Vector2(194, 154)
+
+[node name="Vines" type="Node" parent="." unique_id=1419916717]
+
+[node name="climbingVine" parent="Vines" unique_id=89608185 instance=ExtResource("6_r3v6k")]
+position = Vector2(-137, 117)
+rotation = 8.742278e-08
+scale = Vector2(0.5, 0.5)
+
+[node name="climbingVine2" parent="Vines" unique_id=1743236287 instance=ExtResource("6_r3v6k")]
+position = Vector2(-137, 67)
+rotation = 8.742278e-08
+scale = Vector2(0.5, 0.5)
 
 [connection signal="body_entered" from="Killzone" to="Killzone" method="_on_body_entered"]
 [connection signal="timeout" from="Killzone/Timer" to="Killzone" method="_on_timer_timeout"]
