@@ -148,7 +148,4 @@ func AnimationDirection() -> void:
 func Cheat() -> void:
 	if Input.is_action_pressed("fly"):
 		velocity.y = -200
-		vinesIn = 1
-	else:
-		vinesIn = 0
-		
+		Walk()

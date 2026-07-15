@@ -11,11 +11,18 @@
 [ext_resource type="Texture2D" uid="uid://igt3y2vu25ds" path="res://assets/sprites/nature-paltformer-tileset-16x16.png" id="3_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://b7jeuj6fo4ts1" path="res://assets/sprites/images-removebg-preview.png" id="6_ca42v"]
 [ext_resource type="Texture2D" uid="uid://dh5j0tvkqpae5" path="res://assets/sprites/New Piskel-1.png (1).png" id="7_rysoc"]
+[ext_resource type="Texture2D" uid="uid://cfu6jaiveasnm" path="res://art/Birdnest.png" id="9_rysoc"]
 [ext_resource type="Texture2D" uid="uid://jsikqegy1nff" path="res://assets/sprites/inside_ground.png" id="10_vtaks"]
 [ext_resource type="PackedScene" uid="uid://bc0x6exx3qr7y" path="res://assets/prefabs/player.tscn" id="11_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://bovfskhc23cyk" path="res://assets/prefabs/bouncy_leaf.tscn" id="12_dinhu"]
 [ext_resource type="PackedScene" uid="uid://b75sxg3b8yh54" path="res://assets/prefabs/vine.tscn" id="13_kvuet"]
 [ext_resource type="PackedScene" uid="uid://blk7b7hrf6ke1" path="res://assets/prefabs/walking_vine.tscn" id="14_trtic"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1kice"]
+size = Vector2(113, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_264po"]
+size = Vector2(113, 35)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ca42v"]
 size = Vector2(82, 3853)
@@ -517,22 +524,22 @@ position = Vector2(442, -511)
 position = Vector2(600, -544)
 
 [node name="Bouncy Leaf9" parent="Gameplay" unique_id=1848861492 instance=ExtResource("12_dinhu")]
-position = Vector2(772.99994, -496)
+position = Vector2(770.00006, -511.00003)
 rotation = -0.0837758
 
 [node name="climbingVine12" parent="Gameplay" unique_id=83248747 instance=ExtResource("13_kvuet")]
-position = Vector2(717, -731)
+position = Vector2(720, -744)
 
 [node name="climbingVine13" parent="Gameplay" unique_id=1155430569 instance=ExtResource("13_kvuet")]
-position = Vector2(718, -801)
+position = Vector2(720, -818)
 
 [node name="climbingVine14" parent="Gameplay" unique_id=2114936841 instance=ExtResource("13_kvuet")]
-position = Vector2(720, -875)
+position = Vector2(720, -892)
 rotation = 8.742278e-08
 scale = Vector2(0.5, 0.5)
 
 [node name="climbingVine15" parent="Gameplay" unique_id=1568847408 instance=ExtResource("13_kvuet")]
-position = Vector2(721, -948)
+position = Vector2(720, -965)
 
 [node name="climbingVine16" parent="Gameplay" unique_id=1782646574 instance=ExtResource("13_kvuet")]
 position = Vector2(360, -669)
@@ -551,7 +558,7 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(414, -773)
 
 [node name="Bouncy Leaf5" parent="Gameplay" unique_id=1366173649 instance=ExtResource("12_dinhu")]
-position = Vector2(652.99994, -998)
+position = Vector2(635, -995)
 rotation = -0.6027755
 
 [node name="Bouncy Leaf8" parent="Gameplay" unique_id=917895927 instance=ExtResource("12_dinhu")]
@@ -624,6 +631,27 @@ position = Vector2(-347, -1022)
 
 [node name="climbingVine31" parent="Gameplay" unique_id=517807800 instance=ExtResource("13_kvuet")]
 position = Vector2(-338, -1146)
+[node name="Nest" type="Node2D" parent="Gameplay" unique_id=2068762846]
+position = Vector2(-74, -3441)
+
+[node name="Area2D" type="Area2D" parent="Gameplay/Nest" unique_id=1864943646]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Gameplay/Nest/Area2D" unique_id=1755582738]
+position = Vector2(0, -7.5)
+shape = SubResource("RectangleShape2D_1kice")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Gameplay/Nest" unique_id=629128158]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gameplay/Nest/StaticBody2D" unique_id=1975231333]
+position = Vector2(0, 17.5)
+shape = SubResource("RectangleShape2D_264po")
+
+[node name="Birdnest" type="Sprite2D" parent="Gameplay/Nest" unique_id=1896042435]
+z_index = 4096
+texture = ExtResource("9_rysoc")
 
 [node name="Borders" type="Node" parent="." unique_id=741712658]
 
@@ -647,6 +675,7 @@ shape = SubResource("RectangleShape2D_ssvqc")
 
 [node name="Player" parent="." unique_id=1909432878 instance=ExtResource("11_kvpfn")]
 position = Vector2(-1, -2)
+z_index = 4095
 
 [node name="Ground(s)" type="Node" parent="." unique_id=905198341]
 
