@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brrjkxf84tmw3"
-path="res://.godot/imported/1.png-6b9efce606c3069292af06e653e457fa.ctex"
+uid="uid://s4ug2m7n4gbq"
+path="res://.godot/imported/Leaf-Anim-Sheett.png-2539f8722c34bd55e0b47dd5bc622e1c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Backgrounds/1.png"
-dest_files=["res://.godot/imported/1.png-6b9efce606c3069292af06e653e457fa.ctex"]
+source_file="res://Art/Leaf-Anim-Sheett.png"
+dest_files=["res://.godot/imported/Leaf-Anim-Sheett.png-2539f8722c34bd55e0b47dd5bc622e1c.ctex"]
 
 [params]
 
