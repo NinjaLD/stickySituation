@@ -1,0 +1,159 @@
+[gd_scene format=3 uid="uid://bc0x6exx3qr7y"]
+
+[ext_resource type="Texture2D" uid="uid://bvlo2y1mssebb" path="res://art/Stickbug-Spritesheet.png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://bwfyixbtdaaxm" path="res://scripts/playerScript.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://b35rnjwg1t411" path="res://art/Stickbug-Spritesheet-sheet.png" id="2_nnomm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6qa2l"]
+atlas = ExtResource("2_nnomm")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cruh3"]
+atlas = ExtResource("2_nnomm")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_if4on"]
+atlas = ExtResource("2_nnomm")
+region = Rect2(128, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oip4d"]
+atlas = ExtResource("2_nnomm")
+region = Rect2(192, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jnguj"]
+atlas = ExtResource("2_nnomm")
+region = Rect2(256, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qr6b"]
+atlas = ExtResource("2_nnomm")
+region = Rect2(320, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4r1p"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2wvv"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ur7pv"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4nyrb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6qa2l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cruh3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_if4on")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oip4d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jnguj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2qr6b")
+}],
+"loop": true,
+"name": &"Climb",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4r1p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2wvv")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqkch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlg0r")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuyoq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjrip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smehm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ur7pv")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v84v7"]
+radius = 15.333334
+height = 49.333336
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1909432878]
+z_index = 4096
+scale = Vector2(0.5, 0.5)
+collision_layer = 2
+script = ExtResource("1_g2els")
+gravityAccel = 15
+walkAccel = 15
+walkSpeed = 200
+decceleration = 10
+jumpChargeRate = 0.01
+jumpVelBoostY = Vector2(225, 450)
+jumpVelBoostX = Vector2(100, 400)
+maxVineVelocity = 50
+climbSpeed = 50
+leafBounceMult = 650
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2002029042]
+sprite_frames = SubResource("SpriteFrames_4nyrb")
+animation = &"Climb"
+frame_progress = 0.9675824
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=904624577]
+position = Vector2(-6.666667, 0.6666667)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_v84v7")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2029314000]
+zoom = Vector2(3, 3)

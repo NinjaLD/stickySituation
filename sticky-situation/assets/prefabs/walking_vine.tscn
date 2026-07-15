@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://blk7b7hrf6ke1"]
+
+[ext_resource type="Script" uid="uid://bkigbmhedohu6" path="res://scripts/walking_vine.gd" id="1_r40c2"]
+[ext_resource type="Texture2D" uid="uid://bkxlccwvttblw" path="res://art/Vine-horrizontal.png" id="2_6klgo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r40c2"]
+size = Vector2(237.75516, 3)
+
+[node name="walkingVine" type="Area2D" unique_id=279497176]
+collision_mask = 2
+script = ExtResource("1_r40c2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1509752414]
+position = Vector2(-10.653048, -0.5)
+scale = Vector2(1.1999997, 0.8399997)
+shape = SubResource("RectangleShape2D_r40c2")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=907590989]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1793319847]
+position = Vector2(-8, 0)
+scale = Vector2(1.1729552, 0.34175175)
+shape = SubResource("RectangleShape2D_r40c2")
+
+[node name="Starting Vine" type="Sprite2D" parent="." unique_id=1921198426]
+position = Vector2(-114, -1.4999981)
+rotation = 1.5707964
+scale = Vector2(0.5, -0.5)
+texture = ExtResource("2_6klgo")
+
+[node name="Extension Vine 1" type="Sprite2D" parent="." unique_id=1350754666]
+position = Vector2(-61, -1.4999981)
+rotation = 1.5707964
+scale = Vector2(0.5, -0.5)
+texture = ExtResource("2_6klgo")
+
+[node name="Extension Vine 2" type="Sprite2D" parent="." unique_id=325439762]
+position = Vector2(-9, -1.4999981)
+rotation = 1.5707964
+scale = Vector2(0.5, -0.5)
+texture = ExtResource("2_6klgo")
+
+[node name="Extension Vine 3" type="Sprite2D" parent="." unique_id=1693893954]
+position = Vector2(44, -1.4999981)
+rotation = 1.5707964
+scale = Vector2(0.5, -0.5)
+texture = ExtResource("2_6klgo")
+
+[node name="Extension Vine 4" type="Sprite2D" parent="." unique_id=1364531201]
+position = Vector2(97, -1.4999981)
+rotation = 1.5707964
+scale = Vector2(0.5, -0.5)
+texture = ExtResource("2_6klgo")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
