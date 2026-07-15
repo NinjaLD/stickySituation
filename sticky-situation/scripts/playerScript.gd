@@ -11,6 +11,7 @@ extends CharacterBody2D
 @export var jumpVelBoostX : Vector2
 
 var potentialVelocity : float
+var canClimb : bool
 
 # Automatic
 func _physics_process(delta: float) -> void:
@@ -18,12 +19,11 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		Walk()
 	Jump()
+	Climb()
 	Animation()
 	AnimationDirection()
 	
 	move_and_slide()
-
-
 
 # Custom
 func gravity() -> void:
@@ -61,6 +61,17 @@ func Jump() -> void:
 		
 		potentialVelocity = 0
 
+func Bounce() -> void:
+	pass
+
+func Climb() -> void:
+	if Input.is_action_pressed("climb") and canClimb == true:
+		velocity.y = -50
+		gravityAccel = 0
+		velocity.x = 0
+		print("ayaya")
+	else:
+		velocity.y = 0
 #Plays character animations relative to what they are doing
 func Animation() -> void:
 	if is_on_floor():

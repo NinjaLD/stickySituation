@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bovfskhc23cyk"]
+
+[ext_resource type="Script" uid="uid://df7i8vc4ogus7" path="res://scripts/bouncy_leaf.gd" id="1_htwr0"]
+[ext_resource type="Texture2D" uid="uid://ogyw4h0qerbi" path="res://assets/icon.svg" id="1_p4k5o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v84v7"]
+
+[node name="Bouncy Leaf" type="Area2D" unique_id=594540930]
+modulate = Color(0, 18.892157, 0, 1)
+scale = Vector2(0.991, 0.26)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_htwr0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1161523519]
+rotation = 3.1415925
+scale = Vector2(6.1337748, -1.7784978)
+shape = SubResource("RectangleShape2D_v84v7")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=759312338]
+rotation = 3.1415925
+scale = Vector2(0.95690715, -0.27745673)
+texture = ExtResource("1_p4k5o")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
