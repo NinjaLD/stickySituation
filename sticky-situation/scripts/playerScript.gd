@@ -1,5 +1,4 @@
 extends CharacterBody2D
-#random comment
 
 @onready var animatedSprite = $AnimatedSprite2D
 @export var gravityAccel : int
