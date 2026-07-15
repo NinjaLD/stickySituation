@@ -9,6 +9,8 @@ extends CharacterBody2D
 @export var jumpChargeRate : float
 @export var jumpVelBoostY : Vector2
 @export var jumpVelBoostX : Vector2
+@export var maxVineVelocity : int
+@export var climbSpeed : int
 
 var potentialVelocity : float
 var canClimb : bool
@@ -16,7 +18,7 @@ var canClimb : bool
 # Automatic
 func _physics_process(delta: float) -> void:
 	gravity()
-	if is_on_floor():
+	if is_on_floor() or canClimb:
 		Walk()
 	Jump()
 	Climb()
@@ -27,7 +29,7 @@ func _physics_process(delta: float) -> void:
 
 # Custom
 func gravity() -> void:
-	if not is_on_floor():
+	if not is_on_floor() and not canClimb:
 		velocity.y += gravityAccel
 
 func GetInputDir() -> float:
@@ -65,13 +67,21 @@ func Bounce(leafDir) -> void:
 	velocity.x = 100 * -cos(leafDir + deg_to_rad(90))
 	print(rad_to_deg(leafDir + deg_to_rad(90)))
 
+func Climbing() -> void:
+	if velocity.x > maxVineVelocity:
+		velocity.x = maxVineVelocity
+	elif velocity.x < -maxVineVelocity:
+		velocity.x = -maxVineVelocity
+
 func Climb() -> void:
 	if Input.is_action_pressed("climb") and canClimb == true:
-		velocity.y = -50
-		gravityAccel = 0
-		velocity.x = 0
-		print("ayaya")
-	else:
+		animatedSprite.play("Climb")
+		velocity.y = -climbSpeed
+		Climbing()
+	elif Input.is_action_pressed("descend"):
+		velocity.y = climbSpeed
+		Climbing()
+	elif canClimb == true:
 		velocity.y = 0
 
 #Plays character animations relative to what they are doing
@@ -81,12 +91,13 @@ func Animation() -> void:
 			animatedSprite.play("Idle")
 		else:
 			animatedSprite.play("Walk")
-	else:
+	elif not canClimb:
 		animatedSprite.play("Jump")
 
 #Flips the sprite depending on the direction they are going
 func AnimationDirection() -> void:
-	if GetInputDir() < 0 and velocity.x < 0:
-		animatedSprite.flip_h = true
-	elif GetInputDir() > 0 and velocity.x > 0:
-		animatedSprite.flip_h = false
+	if not canClimb:
+		if GetInputDir() < 0 and velocity.x < 0:
+			animatedSprite.flip_h = true
+		elif GetInputDir() > 0 and velocity.x > 0:
+			animatedSprite.flip_h = false
