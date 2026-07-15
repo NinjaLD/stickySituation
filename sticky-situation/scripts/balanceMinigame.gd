@@ -20,6 +20,7 @@ func _process(delta: float) -> void:
 	KeyPress()
 	if count == 0:
 		self.queue_free() # Fail Loser
+		player.position.y =+ 0.1
 		player.isInMinigame = false
 		
 	if spawns == 0:
