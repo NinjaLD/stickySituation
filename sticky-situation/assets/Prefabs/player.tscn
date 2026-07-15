@@ -130,6 +130,7 @@ radius = 15.333334
 height = 49.333336
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1909432878]
+z_index = 4096
 scale = Vector2(0.5, 0.5)
 collision_layer = 2
 script = ExtResource("1_g2els")
@@ -140,11 +141,13 @@ decceleration = 10
 jumpChargeRate = 0.01
 jumpVelBoostY = Vector2(225, 450)
 jumpVelBoostX = Vector2(100, 400)
+maxVineVelocity = 100
+climbSpeed = 50
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2002029042]
 sprite_frames = SubResource("SpriteFrames_4nyrb")
 animation = &"Climb"
-frame_progress = 0.2456013
+frame_progress = 0.9675824
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=904624577]
 position = Vector2(-6.666667, 0.6666667)
