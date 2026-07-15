@@ -65,7 +65,8 @@ func Jump() -> void:
 
 func Bounce() -> void:
 	pass
-func Climbing() -> void:
+	
+func isClimbing() -> void:
 	if velocity.x > maxVineVelocity:
 		velocity.x = maxVineVelocity
 	elif velocity.x < -maxVineVelocity:
@@ -75,10 +76,10 @@ func Climb() -> void:
 	if Input.is_action_pressed("climb") and canClimb == true:
 		animatedSprite.play("Climb")
 		velocity.y = -climbSpeed
-		Climbing()
+		isClimbing()
 	elif Input.is_action_pressed("descend"):
 		velocity.y = climbSpeed
-		Climbing()
+		isClimbing()
 	elif canClimb == true:
 		velocity.y = 0
 	
