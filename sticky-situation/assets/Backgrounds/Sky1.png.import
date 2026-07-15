@@ -2,6 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
+uid="uid://dvfj1doelwl4x"
+path="res://.godot/imported/Summer7.png-465967908487bd4e3c183f9969c36284.ctex"
 uid="uid://bmtn0wwn25t2j"
 path="res://.godot/imported/Sky1.png-60bae56cde98f9ffa5833b2cdcd28077.ctex"
 metadata={
@@ -10,6 +12,8 @@ metadata={
 
 [deps]
 
+source_file="res://assets/backgrounds/Summer7.png"
+dest_files=["res://.godot/imported/Summer7.png-465967908487bd4e3c183f9969c36284.ctex"]
 source_file="res://assets/Backgrounds/Sky1.png"
 dest_files=["res://.godot/imported/Sky1.png-60bae56cde98f9ffa5833b2cdcd28077.ctex"]
 

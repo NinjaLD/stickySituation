@@ -2,6 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
+uid="uid://boivdeeibg3rm"
+path="res://.godot/imported/Summer4.png-43ba928ed6987834dc7df97720b6c844.ctex"
 uid="uid://i6ve3hdx3bx1"
 path="res://.godot/imported/Leaf-Anim-Sheet.png-ce7aa62887ec3b24cc263252c649dada.ctex"
 metadata={
@@ -10,6 +12,8 @@ metadata={
 
 [deps]
 
+source_file="res://assets/backgrounds/Summer4.png"
+dest_files=["res://.godot/imported/Summer4.png-43ba928ed6987834dc7df97720b6c844.ctex"]
 source_file="res://Art/Leaf-Anim-Sheet.png"
 dest_files=["res://.godot/imported/Leaf-Anim-Sheet.png-ce7aa62887ec3b24cc263252c649dada.ctex"]
 

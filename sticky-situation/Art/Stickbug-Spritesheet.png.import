@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvlo2y1mssebb"
-path="res://.godot/imported/Stickbug-Spritesheet.png-f3481664a20114b1787b4b7877c9a6bf.ctex"
+path="res://.godot/imported/Stickbug-Spritesheet.png-f25eb7a17d0d783bc7ee547b60ea5979.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Stickbug-Spritesheet.png"
-dest_files=["res://.godot/imported/Stickbug-Spritesheet.png-f3481664a20114b1787b4b7877c9a6bf.ctex"]
+source_file="res://art/Stickbug-Spritesheet.png"
+dest_files=["res://.godot/imported/Stickbug-Spritesheet.png-f25eb7a17d0d783bc7ee547b60ea5979.ctex"]
 
 [params]
 
