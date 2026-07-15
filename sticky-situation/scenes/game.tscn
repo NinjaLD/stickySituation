@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://b7jeuj6fo4ts1" path="res://assets/sprites/images-removebg-preview.png" id="6_ca42v"]
 [ext_resource type="Texture2D" uid="uid://dh5j0tvkqpae5" path="res://assets/sprites/New Piskel-1.png (1).png" id="7_rysoc"]
 [ext_resource type="Texture2D" uid="uid://cfu6jaiveasnm" path="res://art/Birdnest.png" id="9_rysoc"]
-[ext_resource type="Script" uid="uid://cv6kldejffnf7" path="res://scenes/nest.gd" id="9_ssvqc"]
+[ext_resource type="Script" uid="uid://cv6kldejffnf7" path="res://scripts/nest.gd" id="9_ssvqc"]
 [ext_resource type="Texture2D" uid="uid://jsikqegy1nff" path="res://assets/sprites/inside_ground.png" id="10_vtaks"]
 [ext_resource type="PackedScene" uid="uid://bc0x6exx3qr7y" path="res://assets/prefabs/player.tscn" id="11_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://bovfskhc23cyk" path="res://assets/prefabs/bouncy_leaf.tscn" id="12_dinhu"]
@@ -34,10 +34,10 @@ size = Vector2(69, 3839)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ssvqc"]
 size = Vector2(2040, 68)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ssvqc"]
 texture = ExtResource("1_yqjtg")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbhrr"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_264po"]
 texture = ExtResource("2_lnu2h")
 texture_region_size = Vector2i(8, 8)
 0:0/size_in_atlas = Vector2i(2, 2)
@@ -137,7 +137,7 @@ texture_region_size = Vector2i(8, 8)
 8:0/0 = 0
 8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10.971382, -3.7770329, -11.151241, 3.956892, 10.431807, 3.5971756, 10.431807, -3.7770329)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iywne"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1kice"]
 texture = ExtResource("3_lbhrr")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -279,7 +279,7 @@ texture = ExtResource("3_lbhrr")
 4:10/0 = 0
 4:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yqjtg"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5newe"]
 texture = ExtResource("1_uwrxv")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -408,26 +408,26 @@ texture = ExtResource("1_uwrxv")
 5:3/0 = 0
 2:8/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kvpfn"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_37s47"]
 texture = ExtResource("10_vtaks")
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ssvqc"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bt5mj"]
 texture = ExtResource("6_ca42v")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_264po"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e1j6l"]
 texture = ExtResource("7_rysoc")
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_lnu2h"]
 physics_layer_0/collision_layer = 1
-sources/3 = SubResource("TileSetAtlasSource_yqjtg")
-sources/0 = SubResource("TileSetAtlasSource_lnu2h")
-sources/1 = SubResource("TileSetAtlasSource_lbhrr")
-sources/2 = SubResource("TileSetAtlasSource_iywne")
-sources/4 = SubResource("TileSetAtlasSource_kvpfn")
-sources/5 = SubResource("TileSetAtlasSource_ssvqc")
-sources/6 = SubResource("TileSetAtlasSource_264po")
+sources/3 = SubResource("TileSetAtlasSource_5newe")
+sources/0 = SubResource("TileSetAtlasSource_ssvqc")
+sources/1 = SubResource("TileSetAtlasSource_264po")
+sources/2 = SubResource("TileSetAtlasSource_1kice")
+sources/4 = SubResource("TileSetAtlasSource_37s47")
+sources/5 = SubResource("TileSetAtlasSource_bt5mj")
+sources/6 = SubResource("TileSetAtlasSource_e1j6l")
 
 [node name="Game" type="Node2D" unique_id=519499833]
 
