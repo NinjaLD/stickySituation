@@ -13,13 +13,13 @@ extends CharacterBody2D
 @export var leafBounceMult : int
 
 var potentialVelocity : float
-var canClimb : bool
+var vinesIn : int
 var vineWalking : bool
 
 # Automatic
 func _physics_process(delta: float) -> void:
 	gravity()
-	if is_on_floor() or canClimb:
+	if is_on_floor() or vinesIn >= 0:
 		Walk()
 	Jump()
 	Climb()
@@ -31,7 +31,7 @@ func _physics_process(delta: float) -> void:
 
 # Custom
 func gravity() -> void:
-	if not is_on_floor() and not canClimb:
+	if not is_on_floor() and vinesIn <= 0:
 		velocity.y += gravityAccel
 
 func GetInputDir() -> float:
@@ -80,14 +80,15 @@ func isOnVine() -> void:
 		velocity.x = -maxVineVelocity
 
 func Climb() -> void:
-	if Input.is_action_pressed("climb") and canClimb == true:
+	if Input.is_action_pressed("climb") and vinesIn >= 1:
 		animatedSprite.play("Climb")
 		velocity.y = -climbSpeed
 		isOnVine()
-	elif Input.is_action_pressed("descend") and canClimb == true:
+	elif Input.is_action_pressed("descend") and vinesIn >= 1:
+		animatedSprite.play("Climb")
 		velocity.y = climbSpeed
 		isOnVine()
-	elif canClimb == true:
+	elif vinesIn >= 1:
 		velocity.y = 0
 
 #Plays character animations relative to what they are doing
@@ -97,12 +98,12 @@ func Animation() -> void:
 			animatedSprite.play("Idle")
 		else:
 			animatedSprite.play("Walk")
-	elif not canClimb:
+	elif vinesIn <= 0:
 		animatedSprite.play("Jump")
 
 #Flips the sprite depending on the direction they are going
 func AnimationDirection() -> void:
-	if not canClimb:
+	if vinesIn <= 0:
 		if GetInputDir() < 0 and velocity.x < 0:
 			animatedSprite.flip_h = true
 		elif GetInputDir() > 0 and velocity.x > 0:
