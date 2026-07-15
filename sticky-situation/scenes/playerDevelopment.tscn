@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bxg8v63xhemp"]
 
 [ext_resource type="Texture2D" uid="uid://ogyw4h0qerbi" path="res://assets/icon.svg" id="1_40edo"]
-[ext_resource type="PackedScene" uid="uid://bovfskhc23cyk" path="res://assets/Prefabs/bouncy_leaf.tscn" id="1_v84v7"]
-[ext_resource type="PackedScene" uid="uid://bc0x6exx3qr7y" path="res://assets/Prefabs/player.tscn" id="2_40edo"]
-[ext_resource type="PackedScene" path="res://assets/Prefabs/vine.tscn" id="3_4nyrb"]
+[ext_resource type="PackedScene" uid="uid://djf74h6lc73vv" path="res://assets/prefabs/bouncy_leaf.tscn" id="1_v84v7"]
+[ext_resource type="PackedScene" uid="uid://bc0x6exx3qr7y" path="res://assets/prefabs/player.tscn" id="2_40edo"]
+[ext_resource type="PackedScene" uid="uid://b75sxg3b8yh54" path="res://assets/prefabs/vine.tscn" id="3_4nyrb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v84v7"]
 
