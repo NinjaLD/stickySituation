@@ -631,6 +631,7 @@ position = Vector2(-347, -1022)
 
 [node name="climbingVine31" parent="Gameplay" unique_id=517807800 instance=ExtResource("13_kvuet")]
 position = Vector2(-338, -1146)
+
 [node name="Nest" type="Node2D" parent="Gameplay" unique_id=2068762846]
 position = Vector2(-74, -3441)
 
@@ -674,8 +675,8 @@ position = Vector2(109, -3643)
 shape = SubResource("RectangleShape2D_ssvqc")
 
 [node name="Player" parent="." unique_id=1909432878 instance=ExtResource("11_kvpfn")]
-position = Vector2(-1, -2)
 z_index = 4095
+position = Vector2(-1, -2)
 
 [node name="Ground(s)" type="Node" parent="." unique_id=905198341]
 
