@@ -370,6 +370,9 @@ size = Vector2(82, 3853)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rysoc"]
 size = Vector2(69, 3839)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ssvqc"]
+size = Vector2(2040, 68)
+
 [node name="Game" type="Node2D" unique_id=519499833]
 
 [node name="Tilemap" type="TileMap" parent="." unique_id=287009948]
@@ -549,3 +552,9 @@ shape = SubResource("RectangleShape2D_ca42v")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D2" unique_id=1125867325]
 position = Vector2(1089, -1755)
 shape = SubResource("RectangleShape2D_rysoc")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Borders" unique_id=229935929]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D3" unique_id=486112737]
+position = Vector2(109, -3643)
+shape = SubResource("RectangleShape2D_ssvqc")
