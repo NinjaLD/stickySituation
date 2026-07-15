@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://djf74h6lc73vv"]
+[gd_scene format=3 uid="uid://bovfskhc23cyk"]
 
-[ext_resource type="Script" uid="uid://df7i8vc4ogus7" path="res://scripts/bouncy_leaf.gd" id="1_htwr0"]
-[ext_resource type="Texture2D" uid="uid://i6ve3hdx3bx1" path="res://Art/Leaf-Anim-Sheet.png" id="2_htwr0"]
+[ext_resource type="Script" uid="uid://df7i8vc4ogus7" path="res://scripts/bouncyLeaf.gd" id="1_htwr0"]
+[ext_resource type="Texture2D" uid="uid://i6ve3hdx3bx1" path="res://art/Leaf-Anim-Sheet.png" id="2_htwr0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v84v7"]
 size = Vector2(3.0976028, 5.622722)
