@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://chbplxehjs76o" path="res://scripts/killzone.gd" id="4_d4ocj"]
 [ext_resource type="PackedScene" uid="uid://b75sxg3b8yh54" path="res://assets/prefabs/vine.tscn" id="6_r3v6k"]
 [ext_resource type="PackedScene" uid="uid://blk7b7hrf6ke1" path="res://assets/prefabs/walking_vine.tscn" id="7_ax3ve"]
+[ext_resource type="PackedScene" uid="uid://bovfskhc23cyk" path="res://assets/prefabs/bouncy_leaf.tscn" id="8_wal4a"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ax3ve"]
 load_path = "res://.godot/imported/Tree.png-8551be9d76899eb285caf67e5c540318.ctex"
@@ -459,6 +460,10 @@ shape = SubResource("WorldBoundaryShape2D_m3w0j")
 
 [node name="walkingVine" parent="." unique_id=279497176 instance=ExtResource("7_ax3ve")]
 position = Vector2(194, 154)
+
+[node name="Bouncy Leaf" parent="." unique_id=594540930 instance=ExtResource("8_wal4a")]
+position = Vector2(363, 126)
+rotation = -0.62133723
 
 [node name="Vines" type="Node" parent="." unique_id=1419916717]
 
