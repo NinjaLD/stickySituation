@@ -23,7 +23,6 @@ func _process(delta: float) -> void:
 		player.vineWalking = false
 		player.velocity.y = -400
 		player.velocity.x = 500 * (1 if randi_range(0, 1) == 1 else -1)
-		print(player.velocity)
 		self.queue_free() # Fail Loser
 		
 	if spawns == 0:
