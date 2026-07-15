@@ -19,7 +19,7 @@ var vineWalking : bool
 # Automatic
 func _physics_process(delta: float) -> void:
 	gravity()
-	if is_on_floor() or vinesIn >= 0:
+	if is_on_floor():
 		Walk()
 	Jump()
 	Climb()
@@ -51,7 +51,6 @@ func GetVelocityDir() -> int:
 func Walk() -> void:
 	if GetInputDir() == 0:
 		velocity.x = maxf(abs(velocity.x) - decceleration, 0) * GetVelocityDir()
-		pass 
 	else:
 		velocity.x = clampf(velocity.x + GetInputDir() * walkAccel, -walkSpeed, walkSpeed)
 
