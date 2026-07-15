@@ -47,7 +47,6 @@ func GetVelocityDir() -> int:
 	return velocityDir
 
 func Walk() -> void:
-	
 	if GetInputDir() == 0:
 		velocity.x = maxf(abs(velocity.x) - decceleration, 0) * GetVelocityDir()
 		pass 
@@ -63,19 +62,28 @@ func Jump() -> void:
 		
 		potentialVelocity = 0
 
-func Bounce() -> void:
-	pass
+func Bounce(leafDir) -> void:
+	velocity.y = 100 * -sin(leafDir + deg_to_rad(90))
+	velocity.x = 100 * -cos(leafDir + deg_to_rad(90))
+	print(rad_to_deg(leafDir + deg_to_rad(90)))
+
+func isClimbing() -> void:
+	if velocity.x > maxVineVelocity:
+		velocity.x = maxVineVelocity
+	elif velocity.x < -maxVineVelocity:
+		velocity.x = -maxVineVelocity
 
 func Climb() -> void:
 	if Input.is_action_pressed("climb") and canClimb == true:
 		animatedSprite.play("Climb")
 		velocity.y = -climbSpeed
-		if velocity.x > maxVineVelocity:
-			velocity.x = maxVineVelocity
-		elif velocity.x < -maxVineVelocity:
-			velocity.x = -maxVineVelocity
+		isClimbing()
+	elif Input.is_action_pressed("descend"):
+		velocity.y = climbSpeed
+		isClimbing()
 	elif canClimb == true:
 		velocity.y = 0
+
 #Plays character animations relative to what they are doing
 func Animation() -> void:
 	if is_on_floor():
