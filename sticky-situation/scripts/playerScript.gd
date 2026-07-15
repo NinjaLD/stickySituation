@@ -26,6 +26,7 @@ func _physics_process(delta: float) -> void:
 	vineWalker()
 	Animation()
 	AnimationDirection()
+	#Cheat()
 	
 	move_and_slide()
 
@@ -108,3 +109,12 @@ func AnimationDirection() -> void:
 			animatedSprite.flip_h = true
 		elif GetInputDir() > 0 and velocity.x > 0:
 			animatedSprite.flip_h = false
+			
+#Cheat button
+func Cheat() -> void:
+	if Input.is_action_pressed("fly"):
+		velocity.y = -200
+		vinesIn = 1
+	else:
+		vinesIn = 0
+		
