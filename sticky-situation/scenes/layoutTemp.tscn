@@ -457,8 +457,8 @@ wait_time = 0.2
 position = Vector2(-2, -43)
 shape = SubResource("WorldBoundaryShape2D_m3w0j")
 
-[node name="Vine" parent="." unique_id=89608185 instance=ExtResource("6_r3v6k")]
-position = Vector2(-145, 124)
+[node name="climbingVine" parent="." unique_id=89608185 instance=ExtResource("6_r3v6k")]
+position = Vector2(-170, 115)
 
 [connection signal="body_entered" from="Killzone" to="Killzone" method="_on_body_entered"]
 [connection signal="timeout" from="Killzone/Timer" to="Killzone" method="_on_timer_timeout"]
