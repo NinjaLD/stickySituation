@@ -47,8 +47,8 @@ scale = Vector2(1, 0.99999994)
 texture = ExtResource("1_40edo")
 
 [node name="Bouncy Leaf" parent="Level" unique_id=594540930 instance=ExtResource("1_v84v7")]
-position = Vector2(217, 222.99998)
-rotation = 0.18459836
+position = Vector2(119, 159.00002)
+rotation = 0.7853982
 
 [node name="CharacterBody2D" parent="." unique_id=1909432878 instance=ExtResource("2_40edo")]
 position = Vector2(23, 0)
