@@ -141,7 +141,7 @@ decceleration = 10
 jumpChargeRate = 0.01
 jumpVelBoostY = Vector2(225, 450)
 jumpVelBoostX = Vector2(100, 400)
-maxVineVelocity = 100
+maxVineVelocity = 50
 climbSpeed = 50
 leafBounceMult = 650
 

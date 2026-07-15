@@ -2,16 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvfj1doelwl4x"
-path="res://.godot/imported/Summer7.png-465967908487bd4e3c183f9969c36284.ctex"
+uid="uid://d2gqduv681r4m"
+path="res://.godot/imported/Summer2.png-b8cefc13691822397b358dccd7187c85.ctex"
+uid="uid://fqdrjjpaq7uu"
+path="res://.godot/imported/Sky2.png-3943670525029224f3eba6cae1be8d92.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/backgrounds/Summer7.png"
-dest_files=["res://.godot/imported/Summer7.png-465967908487bd4e3c183f9969c36284.ctex"]
+source_file="res://assets/backgrounds/Summer2.png"
+dest_files=["res://.godot/imported/Summer2.png-b8cefc13691822397b358dccd7187c85.ctex"]
+source_file="res://assets/Backgrounds/Sky2.png"
+dest_files=["res://.godot/imported/Sky2.png-3943670525029224f3eba6cae1be8d92.ctex"]
 
 [params]
 
