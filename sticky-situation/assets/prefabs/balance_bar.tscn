@@ -7,3 +7,5 @@
 scale = Vector2(0.25, 0.9)
 texture = ExtResource("1_h7olr")
 script = ExtResource("2_64ii3")
+speed = 250
+barDistance = 200
