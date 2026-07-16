@@ -720,6 +720,7 @@ shape = SubResource("RectangleShape2D_ssvqc")
 
 [node name="Player" parent="." unique_id=1909432878 instance=ExtResource("11_kvpfn")]
 z_index = 4095
+position = Vector2(0, 152)
 
 [node name="Ground(s)" type="Node" parent="." unique_id=905198341]
 
