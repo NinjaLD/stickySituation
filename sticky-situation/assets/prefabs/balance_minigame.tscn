@@ -8,13 +8,14 @@ size = Vector2(240, 119)
 
 [node name="Balance Minigame" type="Node2D" unique_id=1983109531]
 z_index = 14
-position = Vector2(0, -106)
+position = Vector2(0, -114.00001)
+scale = Vector2(0.6, 0.6)
 script = ExtResource("1_ugccx")
 spawnsRange = Vector2(5, 10)
 count = 3
 
 [node name="Center" type="Area2D" parent="." unique_id=246440263]
-scale = Vector2(0.25, 1)
+scale = Vector2(0.5, 2)
 collision_layer = 0
 collision_mask = 4
 

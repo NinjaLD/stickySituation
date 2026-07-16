@@ -135,6 +135,9 @@ func Animation() -> void:
 	if is_on_floor():
 		if vineWalking:
 			animatedSprite.play("OnVine")
+		elif get_tree().current_scene.name == "Win":
+			animatedSprite.play("StickbugDance")
+			Immovable()
 		elif GetInputDir() == 0:
 			animatedSprite.play("Idle")
 		else:
@@ -154,5 +157,5 @@ func AnimationDirection() -> void:
 #Cheat button
 func Cheat() -> void:
 	if Input.is_action_pressed("fly"):
-		velocity.y = -2000
+		velocity.y = -400
 		Walk()

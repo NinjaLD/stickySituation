@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://bipk3kylwdfu"]
+
+[ext_resource type="PackedScene" uid="uid://bc0x6exx3qr7y" path="res://assets/prefabs/player.tscn" id="1_4826q"]
+[ext_resource type="Texture2D" uid="uid://bmtn0wwn25t2j" path="res://assets/background/Sky1.png" id="2_531e2"]
+[ext_resource type="Texture2D" uid="uid://fqdrjjpaq7uu" path="res://assets/background/Sky2.png" id="3_d70ak"]
+[ext_resource type="Texture2D" uid="uid://defftip8gxbqy" path="res://assets/background/Background1.png" id="4_woh6y"]
+[ext_resource type="Texture2D" uid="uid://da1ogv6l03dib" path="res://assets/background/Background.png" id="5_rx2gv"]
+[ext_resource type="Texture2D" uid="uid://dntu0kf2hc7ko" path="res://assets/sprites/Tree.png" id="6_doh3d"]
+[ext_resource type="Texture2D" uid="uid://cr6kgb88uodbh" path="res://art/dead-bird.png" id="7_4826q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5dn2x"]
+size = Vector2(113, 35)
+
+[node name="Win" type="Node2D" unique_id=113515990]
+
+[node name="Player" parent="." unique_id=1909432878 instance=ExtResource("1_4826q")]
+z_index = 4095
+position = Vector2(-55, -3457)
+
+[node name="Background" type="Node" parent="." unique_id=803805675]
+
+[node name="Sky1" type="Sprite2D" parent="Background" unique_id=2135340125]
+position = Vector2(-5.7498965, -1660.1874)
+scale = Vector2(12.00955, 12.494985)
+texture = ExtResource("2_531e2")
+
+[node name="Sky2" type="Sprite2D" parent="Background" unique_id=1975512913]
+position = Vector2(-5.0002193, -1759.4998)
+scale = Vector2(12.031249, 11.824075)
+texture = ExtResource("3_d70ak")
+
+[node name="Background1" type="Sprite2D" parent="Background" unique_id=1842519818]
+position = Vector2(-7.999901, -1710)
+scale = Vector2(12.024305, 11.543209)
+texture = ExtResource("4_woh6y")
+
+[node name="Background2" type="Sprite2D" parent="Background" unique_id=1966492323]
+position = Vector2(-7.9997864, -633)
+scale = Vector2(12.024305, 4.938271)
+texture = ExtResource("5_rx2gv")
+
+[node name="Tree" type="Sprite2D" parent="Background" unique_id=396831897]
+position = Vector2(8, -1582)
+texture = ExtResource("6_doh3d")
+
+[node name="Nest" type="Node2D" parent="." unique_id=1859298018]
+position = Vector2(-74, -3441)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Nest" unique_id=1826002441]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nest/StaticBody2D" unique_id=1039526757]
+position = Vector2(0, 17.5)
+shape = SubResource("RectangleShape2D_5dn2x")
+
+[node name="Birdnest" type="Sprite2D" parent="Nest" unique_id=2003547842]
+z_index = 4096
+texture = ExtResource("7_4826q")
