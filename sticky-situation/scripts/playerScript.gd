@@ -154,5 +154,5 @@ func AnimationDirection() -> void:
 #Cheat button
 func Cheat() -> void:
 	if Input.is_action_pressed("fly"):
-		velocity.y = -200
+		velocity.y = -2000
 		Walk()
