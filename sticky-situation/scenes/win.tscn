@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bipk3kylwdfu"]
+[gd_scene format=3 uid="uid://cb441eiholsa3"]
 
 [ext_resource type="PackedScene" uid="uid://bc0x6exx3qr7y" path="res://assets/prefabs/player.tscn" id="1_4826q"]
 [ext_resource type="Texture2D" uid="uid://bmtn0wwn25t2j" path="res://assets/background/Sky1.png" id="2_531e2"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://da1ogv6l03dib" path="res://assets/background/Background.png" id="5_rx2gv"]
 [ext_resource type="Texture2D" uid="uid://dntu0kf2hc7ko" path="res://assets/sprites/Tree.png" id="6_doh3d"]
 [ext_resource type="Texture2D" uid="uid://cr6kgb88uodbh" path="res://art/dead-bird.png" id="7_4826q"]
+[ext_resource type="FontFile" uid="uid://0jkd5eh1l8d0" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="8_531e2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5dn2x"]
 size = Vector2(113, 35)
@@ -56,3 +57,14 @@ shape = SubResource("RectangleShape2D_5dn2x")
 [node name="Birdnest" type="Sprite2D" parent="Nest" unique_id=2003547842]
 z_index = 4096
 texture = ExtResource("7_4826q")
+
+[node name="Label" type="Label" parent="." unique_id=302751902]
+modulate = Color(1, 0, 0, 1)
+z_index = 4096
+offset_left = -257.0
+offset_top = -3387.0
+offset_right = 407.0
+offset_bottom = -3355.0
+theme_override_fonts/font = ExtResource("8_531e2")
+theme_override_font_sizes/font_size = 20
+text = "SPACE to return to menu"
