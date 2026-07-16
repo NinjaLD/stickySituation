@@ -690,9 +690,9 @@ rotation = 8.742278e-08
 scale = Vector2(0.5, 0.5)
 
 [node name="climbingVine28" parent="Gameplay" unique_id=1789506567 instance=ExtResource("13_kvuet")]
-position = Vector2(-42, -3182)
+position = Vector2(-42, -3181)
 rotation = 8.742278e-08
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.5, 0.7)
 
 [node name="Bouncy Leaf17" parent="Gameplay" unique_id=326157629 instance=ExtResource("12_dinhu")]
 position = Vector2(332, -3233)
