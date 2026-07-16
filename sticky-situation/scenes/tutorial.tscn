@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bovfskhc23cyk" path="res://assets/prefabs/bouncy_leaf.tscn" id="9_nlqja"]
 [ext_resource type="PackedScene" uid="uid://b75sxg3b8yh54" path="res://assets/prefabs/vine.tscn" id="10_g2equ"]
 [ext_resource type="PackedScene" uid="uid://blk7b7hrf6ke1" path="res://assets/prefabs/walking_vine.tscn" id="11_tbcdj"]
-[ext_resource type="Script" uid="uid://cmseoxv2a7e2a" path="res://scripts/portal.gd" id="12_tbcdj"]
+[ext_resource type="PackedScene" uid="uid://8p7175t1tdx3" path="res://assets/prefabs/portal.tscn" id="12_tbcdj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e13mp"]
 texture = ExtResource("1_ckvwl")
@@ -408,9 +408,6 @@ sources/4 = SubResource("TileSetAtlasSource_dwom6")
 sources/5 = SubResource("TileSetAtlasSource_bl2xa")
 sources/6 = SubResource("TileSetAtlasSource_15kfc")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tbcdj"]
-size = Vector2(194, 296.5)
-
 [node name="Tutorial" type="Node2D" unique_id=133904950]
 
 [node name="Tilemap" type="TileMap" parent="." unique_id=1133981748]
@@ -436,13 +433,5 @@ position = Vector2(774, 8)
 [node name="walkingVine" parent="." unique_id=279497176 instance=ExtResource("11_tbcdj")]
 position = Vector2(1143, -10)
 
-[node name="Portal" type="Area2D" parent="." unique_id=1706319343]
+[node name="Portal" parent="." unique_id=664844284 instance=ExtResource("12_tbcdj")]
 position = Vector2(1383, -24)
-collision_mask = 2
-script = ExtResource("12_tbcdj")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal" unique_id=2122101829]
-position = Vector2(63, -125.75)
-shape = SubResource("RectangleShape2D_tbcdj")
-
-[connection signal="body_entered" from="Portal" to="Portal" method="_on_body_entered"]
