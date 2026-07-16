@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b35rnjwg1t411" path="res://art/Stickbug-Spritesheet-sheet.png" id="2_nnomm"]
 [ext_resource type="Texture2D" uid="uid://brbs0yfnvnwim" path="res://art/Stickbug-Vinewalk.png" id="4_6rjsx"]
 [ext_resource type="Texture2D" uid="uid://bosdi0vdadxa2" path="res://art/Stickbug-dance.png" id="5_hdmdu"]
+[ext_resource type="Texture2D" uid="uid://cykoqhhr76far" path="res://art/square.png" id="6_dyjkh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6qa2l"]
 atlas = ExtResource("2_nnomm")
@@ -213,3 +214,20 @@ shape = SubResource("CapsuleShape2D_v84v7")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2029314000]
 zoom = Vector2(4, 4)
+
+[node name="Charge" type="Node2D" parent="." unique_id=440749272]
+position = Vector2(-430, 188)
+
+[node name="Max" type="Sprite2D" parent="Charge" unique_id=412789833]
+modulate = Color(0, 0.00010123012, 0, 1)
+position = Vector2(-232.5, -154)
+scale = Vector2(0.6, 1.1)
+texture = ExtResource("6_dyjkh")
+offset = Vector2(388, 140)
+
+[node name="Current" type="Sprite2D" parent="Charge" unique_id=2137575556]
+modulate = Color(0, 18.892157, 0, 1)
+position = Vector2(0, 50)
+scale = Vector2(0.5, 1)
+texture = ExtResource("6_dyjkh")
+offset = Vector2(0, -50)
