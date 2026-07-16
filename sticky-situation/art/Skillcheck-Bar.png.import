@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://mdsubty8jkbr"
-path="res://.godot/imported/Skillcheck-Bar.png-96bb122098953c7317c19c4bdabd2c25.ctex"
+path="res://.godot/imported/Skillcheck-bar.png-11a765a3272df9d8eaf06aa53fb4fc37.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Skillcheck-Bar.png"
-dest_files=["res://.godot/imported/Skillcheck-Bar.png-96bb122098953c7317c19c4bdabd2c25.ctex"]
+source_file="res://art/Skillcheck-bar.png"
+dest_files=["res://.godot/imported/Skillcheck-bar.png-11a765a3272df9d8eaf06aa53fb4fc37.ctex"]
 
 [params]
 
