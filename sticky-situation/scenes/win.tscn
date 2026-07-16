@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://defftip8gxbqy" path="res://assets/background/Background1.png" id="4_woh6y"]
 [ext_resource type="Texture2D" uid="uid://da1ogv6l03dib" path="res://assets/background/Background.png" id="5_rx2gv"]
 [ext_resource type="Texture2D" uid="uid://dntu0kf2hc7ko" path="res://assets/sprites/Tree.png" id="6_doh3d"]
-[ext_resource type="Texture2D" uid="uid://cfu6jaiveasnm" path="res://art/Birdnest.png" id="7_ir6vj"]
+[ext_resource type="Texture2D" uid="uid://cr6kgb88uodbh" path="res://art/dead-bird.png" id="7_4826q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5dn2x"]
 size = Vector2(113, 35)
@@ -15,7 +15,7 @@ size = Vector2(113, 35)
 
 [node name="Player" parent="." unique_id=1909432878 instance=ExtResource("1_4826q")]
 z_index = 4095
-position = Vector2(-62, -3457)
+position = Vector2(-55, -3457)
 
 [node name="Background" type="Node" parent="." unique_id=803805675]
 
@@ -55,4 +55,4 @@ shape = SubResource("RectangleShape2D_5dn2x")
 
 [node name="Birdnest" type="Sprite2D" parent="Nest" unique_id=2003547842]
 z_index = 4096
-texture = ExtResource("7_ir6vj")
+texture = ExtResource("7_4826q")
