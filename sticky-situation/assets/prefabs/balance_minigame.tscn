@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cjeoffgb1b8lv"]
 
 [ext_resource type="Script" uid="uid://d17ew8cki6xb7" path="res://scripts/balanceMinigame.gd" id="1_ugccx"]
-[ext_resource type="Texture2D" uid="uid://ogyw4h0qerbi" path="res://assets/icon.svg" id="2_eww4l"]
+[ext_resource type="Texture2D" uid="uid://mdsubty8jkbr" path="res://art/Skillcheck-Bar.png" id="2_ugccx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_drt20"]
-size = Vector2(130, 130)
+size = Vector2(240, 119)
 
 [node name="Balance Minigame" type="Node2D" unique_id=1983109531]
 z_index = 14
@@ -19,11 +19,13 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Center" unique_id=1380161163]
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_drt20")
 
-[node name="Sprite2D" type="Sprite2D" parent="Center" unique_id=1285124368]
-z_index = 7
-texture = ExtResource("2_eww4l")
+[node name="Sprite2D" type="Sprite2D" parent="Center" unique_id=1853212653]
+position = Vector2(0, 5)
+scale = Vector2(4, 1)
+texture = ExtResource("2_ugccx")
 
 [connection signal="area_entered" from="Center" to="." method="_on_area_entered"]
 [connection signal="area_exited" from="Center" to="." method="_on_area_exited"]

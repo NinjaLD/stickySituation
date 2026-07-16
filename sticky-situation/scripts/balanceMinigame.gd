@@ -68,10 +68,12 @@ func BarSpawn() -> void:
 	if spawns > 0:
 		balanceBarTemp = balanceBarPrefab.instantiate()
 		balanceBarTemp.dir = 1 if randi_range(0,1) == 0 else -1
+		if balanceBarTemp.dir == -1:
+			balanceBarTemp.rotation = deg_to_rad(180)
 		balanceBarTemp.position.x = balanceBarTemp.barDistance * -balanceBarTemp.dir
 		self.add_child(balanceBarTemp)
 		spawns -= 1
-
+		
 func KeyPress() -> void:
 	if Input.is_action_just_pressed("balanceLeft"):
 		if touchingLeft > 0:

@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://b4rd20747vvaq"]
 
 [ext_resource type="Script" uid="uid://buod81ratvj4v" path="res://scripts/barMove.gd" id="1_p0ry8"]
-[ext_resource type="Texture2D" uid="uid://ogyw4h0qerbi" path="res://assets/icon.svg" id="1_pn14v"]
+[ext_resource type="Texture2D" uid="uid://dxf8s5jkqs3ju" path="res://art/Skillcheck-Air.png" id="2_p0ry8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_immph"]
+size = Vector2(46.620037, 12.432012)
 
 [node name="Bar" type="Area2D" unique_id=1809461455]
-modulate = Color(18.892157, 0, 0, 1)
+modulate = Color(18.892, 18.578655, 18.524527, 1)
 scale = Vector2(0.05, 0.9)
 collision_layer = 4
 collision_mask = 0
@@ -15,11 +16,13 @@ speed = 150
 barDistance = 200
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1849875011]
-scale = Vector2(6.435, 6.435)
+position = Vector2(50, 1.111108)
+scale = Vector2(6.4350004, 6.435)
 shape = SubResource("RectangleShape2D_immph")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1333425259]
-texture = ExtResource("1_pn14v")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1350055048]
+scale = Vector2(25, 1.25)
+texture = ExtResource("2_p0ry8")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
