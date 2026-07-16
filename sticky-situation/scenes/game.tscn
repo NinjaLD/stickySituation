@@ -670,10 +670,12 @@ rotation = -0.44785535
 position = Vector2(516, -2687)
 
 [node name="Bouncy Leaf15" parent="Gameplay" unique_id=1735058660 instance=ExtResource("12_dinhu")]
-position = Vector2(-210, -2875)
+position = Vector2(-203, -2870.0002)
+rotation = 0.19999257
 
 [node name="Bouncy Leaf16" parent="Gameplay" unique_id=169028838 instance=ExtResource("12_dinhu")]
-position = Vector2(111, -2875)
+position = Vector2(106.00003, -2873.9998)
+rotation = -0.1553628
 
 [node name="climbingVine35" parent="Gameplay" unique_id=1544446525 instance=ExtResource("13_kvuet")]
 position = Vector2(118, -3041)
