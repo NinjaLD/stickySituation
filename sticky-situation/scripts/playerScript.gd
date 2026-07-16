@@ -62,6 +62,8 @@ func GetVelocityDir() -> int:
 func Won() -> void:
 	if won == true:
 		get_tree().change_scene_to_file("res://scenes/startMenu.tscn")
+	if get_tree().current_scene.name == "Win" and Input.is_action_just_pressed("jump"):
+		get_tree().call_deferred("change_scene_to_file", "res://scenes/startMenu.tscn")
 
 func InMinigame() -> void:
 	if vineWalking and minigameTrigger == 0 and not isInMinigame:

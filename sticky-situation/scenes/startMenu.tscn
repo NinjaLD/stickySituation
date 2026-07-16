@@ -409,6 +409,7 @@ sources/6 = SubResource("TileSetAtlasSource_mq1ym")
 [node name="StartMenu" type="Node2D" unique_id=968487194]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2065483029]
+zoom = Vector2(1.705, 1.705)
 
 [node name="Menu Handler" type="Node" parent="." unique_id=1599065744]
 script = ExtResource("1_cpawi")
