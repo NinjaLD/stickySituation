@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://b7jeuj6fo4ts1" path="res://assets/sprites/images-removebg-preview.png" id="6_ca42v"]
 [ext_resource type="Texture2D" uid="uid://dh5j0tvkqpae5" path="res://assets/sprites/New Piskel-1.png (1).png" id="7_rysoc"]
 [ext_resource type="Texture2D" uid="uid://cfu6jaiveasnm" path="res://art/Birdnest.png" id="9_rysoc"]
-[ext_resource type="Script" uid="uid://cv6kldejffnf7" path="res://scripts/nest.gd" id="9_ssvqc"]
+[ext_resource type="Script" path="res://scenes/nest.gd" id="9_ssvqc"]
 [ext_resource type="Texture2D" uid="uid://jsikqegy1nff" path="res://assets/sprites/inside_ground.png" id="10_vtaks"]
 [ext_resource type="PackedScene" uid="uid://bc0x6exx3qr7y" path="res://assets/prefabs/player.tscn" id="11_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://bovfskhc23cyk" path="res://assets/prefabs/bouncy_leaf.tscn" id="12_dinhu"]
@@ -706,7 +706,7 @@ position = Vector2(332, -3233)
 rotation = -0.48212212
 
 [node name="climbingVine29" parent="Gameplay" unique_id=441938884 instance=ExtResource("13_kvuet")]
-position = Vector2(-74, -3367)
+position = Vector2(-149, -3368)
 rotation = 8.742278e-08
 scale = Vector2(0.5, 0.62)
 
