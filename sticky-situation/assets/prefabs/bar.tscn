@@ -12,7 +12,7 @@ scale = Vector2(0.1, 1.8)
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("1_p0ry8")
-speed = 250
+speed = 400
 barDistance = 300
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1849875011]

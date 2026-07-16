@@ -59,7 +59,7 @@ func _on_another_timer_timeout() -> void:
 # Custom
 func SpawnTimer() -> void:
 	timer = Timer.new()
-	timer.wait_time = randf_range(0.75, 1.25)
+	timer.wait_time = randf_range(0.6, 1)
 	self.add_child(timer)
 	timer.start()
 	timer.timeout.connect(_on_timer_timeout)
