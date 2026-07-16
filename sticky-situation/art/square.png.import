@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mdsubty8jkbr"
-path="res://.godot/imported/Skillcheck-Bar.png-96bb122098953c7317c19c4bdabd2c25.ctex"
+uid="uid://cykoqhhr76far"
+path="res://.godot/imported/square.png-2c16becdf289b2207539e4fb9fcb3d9f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Skillcheck-Bar.png"
-dest_files=["res://.godot/imported/Skillcheck-Bar.png-96bb122098953c7317c19c4bdabd2c25.ctex"]
+source_file="res://art/square.png"
+dest_files=["res://.godot/imported/square.png-2c16becdf289b2207539e4fb9fcb3d9f.ctex"]
 
 [params]
 

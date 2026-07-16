@@ -30,6 +30,7 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor() or vinesIn >= 1:
 		Walk()
 	Jump()
+	JumpChargeBar()
 	Climb()
 	vineWalker()
 	InMinigame()
@@ -104,6 +105,8 @@ func Jump() -> void:
 		velocity.x += (jumpVelBoostX.x + (jumpVelBoostX.y - jumpVelBoostX.x) * potentialVelocity) * (velocity.x / walkSpeed)
 		
 		potentialVelocity = 0
+	if not Input.is_action_pressed("jump") or not is_on_floor():
+		potentialVelocity = 0
 
 func vineWalker() -> void:
 	if vineWalking:
@@ -131,6 +134,13 @@ func Climb() -> void:
 	elif vinesIn >= 1:
 		velocity.y = 0
 		isOnVine()
+
+func JumpChargeBar() -> void:
+	if potentialVelocity == 0:
+		$Charge/Current.visible = false
+	else:
+		$Charge/Current.visible = true
+	$Charge/Current.scale.y = potentialVelocity
 
 #Plays character animations relative to what they are doing
 func Animation() -> void:
